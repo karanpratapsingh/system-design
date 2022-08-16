@@ -114,7 +114,7 @@ Now, let's learn about the different versions of IP addresses:
 
 ### IPv4
 
-The original Internet Protocol is IPv4 uses a 32-bit numeric dot-decimal notation that only allows for around 4 billion IP addresses. Initially, it was more than enough but as internet adoption grew we needed something better.
+The original Internet Protocol is IPv4 which uses a 32-bit numeric dot-decimal notation that only allows for around 4 billion IP addresses. Initially, it was more than enough but as internet adoption grew we needed something better.
 
 _Example: `102.22.192.181`_
 
@@ -122,7 +122,7 @@ _Example: `102.22.192.181`_
 
 IPv6 is a new protocol that was introduced in 1998. Deployment commenced in the mid-2000s and since the internet users have grown exponentially, it is still ongoing.
 
-This new protocol uses 128-bit alphanumeric hexadecimal notation. This means that IPv6 can provide about ~340 trillion trillion trillion IP addresses. That's more than enough to meet the growing demand for years to come.
+This new protocol uses 128-bit alphanumeric hexadecimal notation. This means that IPv6 can provide about ~340e+36 IP addresses. That's more than enough to meet the growing demand for years to come.
 
 _Example: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`_
 
@@ -166,9 +166,9 @@ The OSI Model can be seen as a universal language for computer networking. It's 
 
 The Open System Interconnection (OSI) model has defined the common terminology used in networking discussions and documentation. This allows us to take a very complex communications process apart and evaluate its components.
 
-While this model is not directly implemented in the TCP/IP networks that are most common today, it can still help us do so much more. For example:
+While this model is not directly implemented in the TCP/IP networks that are most common today, it can still help us do so much more, such as:
 
-- Make troubleshooting easier and helps identify threats across the entire stack.
+- Make troubleshooting easier and help identify threats across the entire stack.
 - Encourage hardware manufacturers to create networking products that can communicate with each other over the network.
 - Essential for developing a security-first mindset.
 - Separate a complex function into simpler components.
@@ -369,9 +369,9 @@ For additional scalability and redundancy, we can try to load balance at each la
 
 ## But why?
 
-Modern high-traffic websites must serve hundreds of thousands, if not millions, of concurrent requests from users or clients. To cost effectively scale to meet these high volumes, modern computing best practice generally requires adding more servers.
+Modern high-traffic websites must serve hundreds of thousands, if not millions, of concurrent requests from users or clients. To cost-effectively scale to meet these high volumes, modern computing best practice generally requires adding more servers.
 
-A load balancer can sit in front of the servers and route client requests across all servers capable of fulfilling those requests in a manner that maximizes speed and capacity utilization and ensures that no one server is overworked, which could degrade performance. If a single server goes down, the load balancer redirects traffic to the remaining online servers. When a new server is added to the server group, the load balancer automatically starts to send requests to it.
+A load balancer can sit in front of the servers and route client requests across all servers capable of fulfilling those requests in a manner that maximizes speed and capacity utilization. This ensures that no single server is overworked, which could degrade performance. If a single server goes down, the load balancer redirects traffic to the remaining online servers. When a new server is added to the server group, the load balancer automatically starts sending requests to it.
 
 ## Workload distribution
 
@@ -413,7 +413,7 @@ Hardware load balancers include proprietary firmware that requires maintenance a
 
 DNS load balancing is the practice of configuring a domain in the Domain Name System (DNS) such that client requests to the domain are distributed across a group of server machines.
 
-Unfortunately, DNS load balancing has inherent problems limiting its reliability and efficiency. Most significantly, DNS does not check for server, network outages, or errors, and so always returns the same set of IP addresses for a domain even if servers are down or inaccessible
+Unfortunately, DNS load balancing has inherent problems limiting its reliability and efficiency. Most significantly, DNS does not check for server and network outages, or errors. It always returns the same set of IP addresses for a domain even if servers are down or inaccessible.
 
 ## Routing Algorithms
 
