@@ -5513,7 +5513,7 @@ Here's how our service is expected to work:
 ![uber-working](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/uber/uber-working.png)
 
 1. Customer requests a ride by specifying the source, destination, cab type, payment method, etc.
-2. Ride service register's this request, finds nearby drivers, and calculates the estimated time of arrival (ETA).
+2. Ride service registers this request, finds nearby drivers, and calculates the estimated time of arrival (ETA).
 3. The request is then broadcasted to the nearby drivers for them to accept or deny.
 4. If the driver accepts, the customer is notified about the live location of the driver with the estimated time of arrival (ETA) while they wait for pickup.
 5. The customer is picked up and the driver can start the trip.
