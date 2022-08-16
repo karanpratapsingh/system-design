@@ -4027,13 +4027,13 @@ To make our system more resilient we can do the following:
 - Standby replica for our key database in case it fails.
 - Multiple instances and replicas for our distributed cache.
 
-# Whatsapp
+# WhatsApp
 
-Let's design a [Whatsapp](https://whatsapp.com) like instant messaging service, similar to services like [Whatsapp](https://www.whatsapp.com), [Facebook Messenger](https://www.messenger.com), and [WeChat](https://www.wechat.com).
+Let's design a [WhatsApp](https://whatsapp.com) like instant messaging service, similar to services like [WhatsApp](https://www.whatsapp.com), [Facebook Messenger](https://www.messenger.com), and [WeChat](https://www.wechat.com).
 
-## What is Whatsapp?
+## What is WhatsApp?
 
-Whatsapp is a chat application that provides instant messaging services to its users. It is one of the most used mobile applications on the planet connecting over 2 billion users in 180+ countries. Whatsapp is also available on the web.
+WhatsApp is a chat application that provides instant messaging services to its users. It is one of the most used mobile applications on the planet connecting over 2 billion users in 180+ countries. WhatsApp is also available on the web.
 
 ## Requirements
 
@@ -4370,7 +4370,7 @@ As we know, most of our storage space will be used for storing media files such 
 
 But where can we store files at scale? Well, [object storage](https://karanpratapsingh.com/courses/system-design/storage#object-storage) is what we're looking for. Object stores break data files up into pieces called objects. It then stores those objects in a single repository, which can be spread out across multiple networked systems. We can also use distributed file storage such as [HDFS](https://karanpratapsingh.com/courses/system-design/storage#hdfs) or [GlusterFS](https://www.gluster.org).
 
-_Fun fact: Whatsapp deletes media on its servers once it has been downloaded by the user._
+_Fun fact: WhatsApp deletes media on its servers once it has been downloaded by the user._
 
 We can use object stores like [Amazon S3](https://aws.amazon.com/s3), [Azure Blob Storage](https://azure.microsoft.com/en-in/services/storage/blobs), or [Google Cloud Storage](https://cloud.google.com/storage) for this use case.
 
@@ -4409,7 +4409,7 @@ To make our system more resilient we can do the following:
 - Multiple instances and replicas for our distributed cache.
 - We can have a standby replica of our API Gateway.
 - Exactly once delivery and message ordering is challenging in a distributed system, we can use a dedicated [message broker](https://karanpratapsingh.com/courses/system-design/message-brokers) such as [Apache Kafka](https://kafka.apache.org) or [NATS](https://nats.io) to make our notification system more robust.
-- We can add media processing and compression capabilities to the media service to compress large files similar to Whatsapp which will save a lot of storage space and reduce cost.
+- We can add media processing and compression capabilities to the media service to compress large files similar to WhatsApp which will save a lot of storage space and reduce cost.
 - We can create a group service separate from the chat service to further decouple our services.
 
 # Twitter
@@ -4741,7 +4741,7 @@ Trending functionality will be based on top of the search functionality. We can 
 
 Push notifications are an integral part of any social media platform. We can use a message queue or a message broker such as [Apache Kafka](https://kafka.apache.org) with the notification service to dispatch requests to [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging) or [Apple Push Notification Service (APNS)](https://developer.apple.com/documentation/usernotifications) which will handle the delivery of the push notifications to user devices.
 
-_For more details, refer to the [Whatsapp](https://karanpratapsingh.com/courses/system-design/whatsapp#notifications) system design where we discuss push notifications._
+_For more details, refer to the [WhatsApp](https://karanpratapsingh.com/courses/system-design/whatsapp#notifications) system design where we discuss push notifications._
 
 ## Detailed design
 
@@ -5602,7 +5602,7 @@ Handling payments at scale is challenging, to simplify our system we can use a t
 
 Push notifications will be an integral part of our platform. We can use a message queue or a message broker such as [Apache Kafka](https://kafka.apache.org) with the notification service to dispatch requests to [Firebase Cloud Messaging (FCM)](https://firebase.google.com/docs/cloud-messaging) or [Apple Push Notification Service (APNS)](https://developer.apple.com/documentation/usernotifications) which will handle the delivery of the push notifications to user devices.
 
-_For more details, refer to the [Whatsapp](https://karanpratapsingh.com/courses/system-design/whatsapp#notifications) system design where we discuss push notifications._
+_For more details, refer to the [WhatsApp](https://karanpratapsingh.com/courses/system-design/whatsapp#notifications) system design where we discuss push notifications._
 
 ## Detailed design
 
