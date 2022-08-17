@@ -170,7 +170,7 @@ While this model is not directly implemented in the TCP/IP networks that are mos
 
 - Make troubleshooting easier and help identify threats across the entire stack.
 - Encourage hardware manufacturers to create networking products that can communicate with each other over the network.
-- Essential for developing a security-first mindset.
+- Develop a security-first mindset.
 - Separate a complex function into simpler components.
 
 ## Layers
