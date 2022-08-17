@@ -3894,11 +3894,8 @@ To solve this issue we can use a distributed system manager such as [Zookeeper](
 $$
 \begin{align*}
 & Range \space 1: \space 1 \rightarrow 1,000,000 \\
-
 & Range \space 2: \space 1,000,001 \rightarrow 2,000,000 \\
-
 & Range \space 3: \space 2,000,001 \rightarrow 3,000,000 \\
-
 & ...
 \end{align*}
 $$
