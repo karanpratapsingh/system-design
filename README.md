@@ -3862,9 +3862,7 @@ So, if we want to generate a URL that is 7 characters long, we will generate ~3.
 $$
 \begin{gather*}
 62^5 = \sim 916 \space million \space URLs \\
-
 62^6 = \sim 56.8 \space billion \space URLs \\
-
 62^7 = \sim 3.5 \space trillion \space URLs
 \end{gather*}
 $$
