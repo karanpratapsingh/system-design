@@ -793,12 +793,12 @@ Availability is the time a system remains operational to perform its required fu
 Availability is often quantified by uptime (or downtime) as a percentage of time the service is available. It is generally measured in the number of 9s.
 
 $$
-Availability = \frac{Uptime}{(Uptime + downtime)}
+Availability = \frac{Uptime}{(Uptime + Downtime)}
 $$
 
 If availability is 99.00% available, it is said to have "2 nines" of availability, and if it is 99.9%, it is called "3 nines", and so on.
 
-| Availability %           | Downtime (Year)    | Downtime (Month)  | Downtime (Week)    |
+| Availability (Percent)   | Downtime (Year)    | Downtime (Month)  | Downtime (Week)    |
 | ------------------------ | ------------------ | ----------------- | ------------------ |
 | 90% (one nine)           | 36.53 days         | 72 hours          | 16.8 hours         |
 | 99% (two nines)          | 3.65 days          | 7.20 hours        | 1.68 hours         |
