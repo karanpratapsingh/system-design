@@ -2827,7 +2827,7 @@ Like many RPC systems, gRPC is based on the idea of defining a service and speci
 
 ### Advantages
 
-Let's discuss some disadvantages of gRPC:
+Let's discuss some advantages of gRPC:
 
 - Lightweight and efficient.
 - High performance.
