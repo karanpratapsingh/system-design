@@ -881,7 +881,7 @@ Horizontal scaling (also known as scaling out) expands a system's scale by addin
 
 ### Disadvantages
 
-- Increases complexity
+- Increased complexity
 - Data inconsistency
 - Increased load on downstream services
 
@@ -912,7 +912,7 @@ Let's compare all the features of different RAID levels:
 | Read Performance     | High     | High                 | High                 | High                        | High                                    |
 | Write Performance    | High     | Medium               | High                 | High                        | Medium                                  |
 | Cost                 | Low      | High                 | Low                  | Low                         | High                                    |
-| Fault Tolerance      | None     | Single-drive failure | Single-drive failure | Two-drive failure           | Upto one disk failure in each sub-array |
+| Fault Tolerance      | None     | Single-drive failure | Single-drive failure | Two-drive failure           | Up to one disk failure in each sub-array |
 | Capacity Utilization | 100%     | 50%                  | 67%-94%              | 50%-80%                     | 50%                                     |
 
 ## Volumes
@@ -2072,7 +2072,7 @@ Event streaming platforms offer more scalability than message brokers but fewer 
 
 ## Message brokers vs Enterprise Service Bus (ESB)
 
-[Enterprise Service Bus (ESB)](https://karanpratapsingh.com/courses/system-design/enterprise-service-bus) infrastructure is complex and can be challenging to integrate and expensive to maintain. It's difficult to troubleshoot them when problems occur in production environments, they're not easy to scale, and updating is tedious.
+[Enterprise Service Bus (ESB)](https://karanpratapsingh.com/courses/system-design/enterprise-service-bus) infrastructure is complex and can be challenging to integrate and expensive to maintain. It's difficult to troubleshoot it when problems occur in production environments, it's not easy to scale, and updating is tedious.
 
 Whereas message brokers are a _"lightweight"_ alternative to ESBs that provide similar functionality, a mechanism for inter-service communication, at a lower cost. They're well-suited for use in the [microservices architectures](https://karanpratapsingh.com/courses/system-design/monoliths-microservices#microservices) that have become more prevalent as ESBs have fallen out of favor.
 
@@ -2366,7 +2366,7 @@ Below are some common pitfalls of microservices architecture:
 
 Distributed Monolith is a system that resembles the microservices architecture but is tightly coupled within itself like a monolithic application. Adopting microservices architecture comes with a lot of advantages. But while making one, there are good chances that we might end up with a distributed monolith.
 
-Our microservice is just a distributed monolith if any of these apply to it:
+Our microservices are just a distributed monolith if any of these apply to it:
 
 - Requires low latency communication.
 - Services don't scale easily.
@@ -2374,7 +2374,7 @@ Our microservice is just a distributed monolith if any of these apply to it:
 - Sharing the same resources such as databases.
 - Tightly coupled systems.
 
-One of the primary reasons to build an application using microservice architecture is to have scalability. Therefore, microservices should have loosely coupled services which enable every service to be independent. The distributed monolith architecture takes this away and causes most components to depend on one another, increasing design complexity.
+One of the primary reasons to build an application using microservices architecture is to have scalability. Therefore, microservices should have loosely coupled services which enable every service to be independent. The distributed monolith architecture takes this away and causes most components to depend on one another, increasing design complexity.
 
 ## Microservices vs Service Oriented Architecture (SOA)
 
@@ -5299,7 +5299,7 @@ $$
 
 ### Bandwidth
 
-As our system is handling 400 GB of ingress every day, we will a require minimum bandwidth of around 4 MB per second.
+As our system is handling 400 GB of ingress every day, we will require a minimum bandwidth of around 4 MB per second.
 
 $$
 \frac{400 \space GB}{(24 \space hrs \times 3600 \space seconds)} = \sim 5 \space MB/second
@@ -5575,7 +5575,7 @@ We can save further computation by only subdividing a node after a certain thres
 
 **What about race conditions?**
 
-Race conditions can easily occur when a large number of customers will be requesting rides simultaneously. To avoid this can wrap our ride matching logic in a [Mutex](<https://en.wikipedia.org/wiki/Lock_(computer_science)>) to avoid any race conditions. Furthermore, every action should be transactional in nature.
+Race conditions can easily occur when a large number of customers will be requesting rides simultaneously. To avoid this we can wrap our ride matching logic in a [Mutex](<https://en.wikipedia.org/wiki/Lock_(computer_science)>) to avoid any race conditions. Furthermore, every action should be transactional in nature.
 
 _For more details, refer to [Transactions](https://karanpratapsingh.com/courses/system-design/transactions) and [Distributed Transactions](https://karanpratapsingh.com/courses/system-design/distributed-transactions)._
 
