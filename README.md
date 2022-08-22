@@ -905,15 +905,15 @@ There are different RAID levels, however, and not all have the goal of providing
 
 Let's compare all the features of different RAID levels:
 
-| Features             | RAID 0   | RAID 1               | RAID 5               | RAID 6                      | RAID 10                                 |
-| -------------------- | -------- | -------------------- | -------------------- | --------------------------- | --------------------------------------- |
-| Description          | Striping | Mirroring            | Striping with Parity | Striping with double parity | Striping and Mirroring                  |
-| Minimum Disks        | 2        | 2                    | 3                    | 4                           | 4                                       |
-| Read Performance     | High     | High                 | High                 | High                        | High                                    |
-| Write Performance    | High     | Medium               | High                 | High                        | Medium                                  |
-| Cost                 | Low      | High                 | Low                  | Low                         | High                                    |
+| Features             | RAID 0   | RAID 1               | RAID 5               | RAID 6                      | RAID 10                                  |
+| -------------------- | -------- | -------------------- | -------------------- | --------------------------- | ---------------------------------------- |
+| Description          | Striping | Mirroring            | Striping with Parity | Striping with double parity | Striping and Mirroring                   |
+| Minimum Disks        | 2        | 2                    | 3                    | 4                           | 4                                        |
+| Read Performance     | High     | High                 | High                 | High                        | High                                     |
+| Write Performance    | High     | Medium               | High                 | High                        | Medium                                   |
+| Cost                 | Low      | High                 | Low                  | Low                         | High                                     |
 | Fault Tolerance      | None     | Single-drive failure | Single-drive failure | Two-drive failure           | Up to one disk failure in each sub-array |
-| Capacity Utilization | 100%     | 50%                  | 67%-94%              | 50%-80%                     | 50%                                     |
+| Capacity Utilization | 100%     | 50%                  | 67%-94%              | 50%-80%                     | 50%                                      |
 
 ## Volumes
 
@@ -1220,7 +1220,7 @@ NoSQL databases have different data storage models such as key-value, graph, doc
 
 In SQL, each record conforms to a fixed schema, meaning the columns must be decided and chosen before data entry and each row must have data for each column. The schema can be altered later, but it involves modifying the database using migrations.
 
-Whereas in NoSQL, schemas are dynamic. Columns can be added on the fly, and each _row_ (or equivalent) doesn't have to contain data for each _column_.
+Whereas in NoSQL, schemas are dynamic. Fields can be added on the fly, and each _record_ (or equivalent) doesn't have to contain data for each _field_.
 
 ### Querying
 
@@ -2072,7 +2072,7 @@ Event streaming platforms offer more scalability than message brokers but fewer 
 
 ## Message brokers vs Enterprise Service Bus (ESB)
 
-[Enterprise Service Bus (ESB)](https://karanpratapsingh.com/courses/system-design/enterprise-service-bus) infrastructure is complex and can be challenging to integrate and expensive to maintain. It's difficult to troubleshoot it when problems occur in production environments, it's not easy to scale, and updating is tedious.
+[Enterprise Service Bus (ESB)](https://karanpratapsingh.com/courses/system-design/enterprise-service-bus) infrastructure is complex and can be challenging to integrate and expensive to maintain. It's difficult to troubleshoot them when problems occur in production environments, they're not easy to scale, and updating is tedious.
 
 Whereas message brokers are a _"lightweight"_ alternative to ESBs that provide similar functionality, a mechanism for inter-service communication, at a lower cost. They're well-suited for use in the [microservices architectures](https://karanpratapsingh.com/courses/system-design/monoliths-microservices#microservices) that have become more prevalent as ESBs have fallen out of favor.
 
@@ -2374,13 +2374,13 @@ Our microservices are just a distributed monolith if any of these apply to it:
 - Sharing the same resources such as databases.
 - Tightly coupled systems.
 
-One of the primary reasons to build an application using microservices architecture is to have scalability. Therefore, microservices should have loosely coupled services which enable every service to be independent. The distributed monolith architecture takes this away and causes most components to depend on one another, increasing design complexity.
+One of the primary reasons to build an application using microservice architecture is to have scalability. Therefore, microservices should have loosely coupled services which enable every service to be independent. The distributed monolith architecture takes this away and causes most components to depend on one another, increasing design complexity.
 
-## Microservices vs Service Oriented Architecture (SOA)
+## Microservices vs Service-oriented architecture (SOA)
 
-You might have seen _Service Oriented Architecture (SOA)_ mentioned around the internet, sometimes even interchangeably with microservices, but they are different from each other and the main distinction between the two approaches comes down to _scope_.
+You might have seen _Service-ariented architecture (SOA)_ mentioned around the internet, sometimes even interchangeably with microservices, but they are different from each other and the main distinction between the two approaches comes down to _scope_.
 
-Service oriented architecture (SOA) defines a way to make software components reusable via service interfaces. These interfaces utilize common communication standards and focus on maximizing application service reusability whereas microservices are built as a collection of various smallest independent service units focused on team autonomy and decoupling.
+Service-oriented architecture (SOA) defines a way to make software components reusable via service interfaces. These interfaces utilize common communication standards and focus on maximizing application service reusability whereas microservices are built as a collection of various smallest independent service units focused on team autonomy and decoupling.
 
 ## Why you don't need microservices
 
@@ -4101,7 +4101,7 @@ $$
 
 ### Bandwidth
 
-As our system is handling 10.2 TB of ingress every day, we will a require minimum bandwidth of around 120 MB per second.
+As our system is handling 10.2 TB of ingress every day, we will require a minimum bandwidth of around 120 MB per second.
 
 $$
 \frac{10.2 \space TB}{(24 \space hrs \times 3600 \space seconds)} = \sim 120 \space MB/second
@@ -4487,7 +4487,7 @@ $$
 
 ### Bandwidth
 
-As our system is handling 5.1 TB of ingress every day, we will a require minimum bandwidth of around 60 MB per second.
+As our system is handling 5.1 TB of ingress every day, we will require a minimum bandwidth of around 60 MB per second.
 
 $$
 \frac{5.1 \space TB}{(24 \space hrs \times 3600 \space seconds)} = \sim 60 \space MB/second
@@ -4890,7 +4890,7 @@ $$
 
 ### Bandwidth
 
-As our system is handling 5 PB of ingress every day, we will a require minimum bandwidth of around 58 GB per second.
+As our system is handling 5 PB of ingress every day, we will require a minimum bandwidth of around 58 GB per second.
 
 $$
 \frac{5 \space PB}{(24 \space hrs \times 3600 \space seconds)} = \sim 58 \space GB/second
@@ -5575,7 +5575,7 @@ We can save further computation by only subdividing a node after a certain thres
 
 **What about race conditions?**
 
-Race conditions can easily occur when a large number of customers will be requesting rides simultaneously. To avoid this we can wrap our ride matching logic in a [Mutex](<https://en.wikipedia.org/wiki/Lock_(computer_science)>) to avoid any race conditions. Furthermore, every action should be transactional in nature.
+Race conditions can easily occur when a large number of customers will be requesting rides simultaneously. To avoid this, we can wrap our ride matching logic in a [Mutex](<https://en.wikipedia.org/wiki/Lock_(computer_science)>) to avoid any race conditions. Furthermore, every action should be transactional in nature.
 
 _For more details, refer to [Transactions](https://karanpratapsingh.com/courses/system-design/transactions) and [Distributed Transactions](https://karanpratapsingh.com/courses/system-design/distributed-transactions)._
 
