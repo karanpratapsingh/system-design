@@ -294,9 +294,9 @@ The authoritative nameserver is usually the resolver's last step in the journey 
 
 There are three types of queries in a DNS system:
 
-<p align="center">
-  <a href="#"> <img src="https://raw.githubusercontent.com/SamirPaulb/assets/main/Iterative-and-recursive-dns-query-diagram.png"/></a>
-</p>
+
+![dns-query-types](https://raw.githubusercontent.com/SamirPaulb/assets/main/Iterative-and-recursive-dns-query-diagram.png)
+
 
 ### Recursive
 
