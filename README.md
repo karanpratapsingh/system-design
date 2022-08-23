@@ -289,9 +289,14 @@ Management of TLD nameservers is handled by the [Internet Assigned Numbers Autho
 
 The authoritative nameserver is usually the resolver's last step in the journey for an IP address. The authoritative nameserver contains information specific to the domain name it serves (e.g. [google.com](http://google.com)) and it can provide a recursive resolver with the IP address of that server found in the DNS A record, or if the domain has a CNAME record (alias) it will provide the recursive resolver with an alias domain, at which point the recursive resolver will have to perform a whole new DNS lookup to procure a record from an authoritative nameserver (often an A record containing an IP address). If it cannot find the domain, returns the NXDOMAIN message.
 
-## Query Types
+## [Query Types](https://youtu.be/BZISxpdl4lQ)
+**Video:**  https://youtu.be/BZISxpdl4lQ 
 
 There are three types of queries in a DNS system:
+
+<p align="center">
+  <a href="#"> <img src="https://raw.githubusercontent.com/SamirPaulb/assets/main/Iterative-and-recursive-dns-query-diagram.png"/></a>
+</p>
 
 ### Recursive
 
