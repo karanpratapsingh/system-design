@@ -199,7 +199,7 @@ The network layer is responsible for facilitating data transfer between two diff
 
 ### Data Link
 
-The data link layer is very similar to the network layer, except the data link layer facilitates data transfer between two devices on the same network. The data link layer takes packets from the network layer and breaks them into smaller pieces called frames.
+The data link layer is very similar to the network layer, except the **data link layer facilitates data transfer between two devices on the same network.** The data link layer takes packets from the network layer and breaks them into smaller pieces called frames.
 
 ### Physical
 
