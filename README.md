@@ -244,7 +244,8 @@ Earlier we learned about IP addresses that enable every machine to connect with 
 
 This brings us to Domain Name System (DNS) which is a hierarchical and decentralized naming system used for translating human-readable domain names to IP addresses.
 
-## [How DNS works](https://youtu.be/vhfRArT11jc) => https://youtu.be/vhfRArT11jc
+## [How DNS works](https://youtu.be/vhfRArT11jc)
+Video: **https://youtu.be/vhfRArT11jc**
 
 ![how-dns-works](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/domain-name-system/how-dns-works.png)
 
