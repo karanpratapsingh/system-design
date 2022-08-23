@@ -195,7 +195,7 @@ The transport layer (also known as layer 4) is responsible for end-to-end commun
 
 ### Network
 
-The network layer is responsible for facilitating data transfer between two different networks. The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender's device, and reassembles these packets on the receiving device. The network layer also finds the best physical path for the data to reach its destination this is known as routing. If the two devices communicating are on the same network, then the network layer is unnecessary.
+The network layer is responsible for facilitating data transfer between two different networks. The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender's device, and reassembles these packets on the receiving device. The network layer also finds the best physical path for the data to reach its destination this is known as routing. ==**If the two devices communicating are on the same network, then the network layer is unnecessary.**==
 
 ### Data Link
 
