@@ -1,8 +1,7 @@
 # System Design Course
 
-Hey, welcome to the course. I hope this course provides a great learning experience.
+Learn how to design systems at scale and prepare for system design interviews
 
-_This course is also available on my [website](https://karanpratapsingh.com/courses/system-design). Please leave a ⭐ as motivation if this was helpful!_
 
 # Table of contents
 
