@@ -1,7 +1,7 @@
 # System Design Course
 
 > Learn how to design systems at scale and prepare for system design interviews.
-
+Content Credit: [@karanpratapsingh](https://github.com/karanpratapsingh)
 
 # Table of contents
 
