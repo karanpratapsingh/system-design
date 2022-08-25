@@ -1,9 +1,12 @@
 # System Design Course
 
+
+<sup> Blog Disclaimer: This webpage is a modification of [@karanpratapsingh](https://github.com/karanpratapsingh)'s [system-design](https://github.com/karanpratapsingh/system-design) repository with GPL-3.0 license.</sup>
+
+
 > Learn how to design systems at scale and prepare for system design interviews.
 
 
-> Content Credit: [@karanpratapsingh](https://github.com/karanpratapsingh)
 
 # Table of contents
 
