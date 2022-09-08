@@ -2104,7 +2104,7 @@ Messages are stored in the queue until they are processed and deleted. Each mess
 
 Let's discuss some advantages of using a message queue:
 
-- **Scalability**: Message queues make it possible to scale precisely where we need to. When workloads peak, multiple instances of our application can all add requests to the queue without the risk of collision
+- **Scalability**: Message queues make it possible to scale precisely where we need to. When workloads peak, multiple instances of our application can add all requests to the queue without the risk of collision
 - **Decoupling**: Message queues remove dependencies between components and significantly simplify the implementation of decoupled applications.
 - **Performance**: Message queues enable asynchronous communication, which means that the endpoints that are producing and consuming messages interact with the queue, not each other. Producers can add requests to the queue without waiting for them to be processed.
 - **Reliability**: Queues make our data persistent, and reduce the errors that happen when different parts of our system go offline.
@@ -2311,7 +2311,7 @@ The microservices architecture style has the following characteristics:
 - **Small but focused**: It's about scope and responsibilities and not size, a service should be focused on a specific problem. Basically, _"It does one thing and does it well"_. Ideally, they can be independent of the underlying architecture.
 - **Built for businesses**: The microservices architecture is usually organized around business capabilities and priorities.
 - **Resilience & Fault tolerance**: Services should be designed in such a way that they still function in case of failure or errors. In environments with independently deployable services, failure tolerance is of the highest importance.
-- **Highly maintainable**: Service should be easy to maintainable and test because services that cannot be maintained will be re-written.
+- **Highly maintainable**: Service should be easy to maintain and test because services that cannot be maintained will be re-written.
 
 ### Advantages
 
@@ -2388,7 +2388,7 @@ Service-oriented architecture (SOA) defines a way to make software components re
 
 So, you might be wondering, monoliths seem like a bad idea to begin with, why would anyone use that?
 
-Well, it depends. While each approach has its own advantages and disadvantages, it is advised to start with a monolith when building a new system. It is important to understand, that microservices are not a silver bullet instead they solve an organizational problem. Microservices architecture is about your organizational priorities and team as much as it's about technology.
+Well, it depends. While each approach has its own advantages and disadvantages, it is advised to start with a monolith when building a new system. It is important to understand, that microservices are not a silver bullet, instead they solve an organizational problem. Microservices architecture is about your organizational priorities and team as much as it's about technology.
 
 Before making the decision to move to microservices architecture, you need to ask yourself questions like:
 
@@ -3091,7 +3091,7 @@ The basic idea behind the circuit breaker is very simple. We wrap a protected fu
 
 ## Why do we need circuit breaking?
 
-It's common for software systems to make remote calls to software running in different processes, probably on different machines across a network. One of the big differences between in-memory calls and remote calls is that remote calls can fail, or hang without a response until some timeout limit is reached. What's worse if we have many callers on an unresponsive supplier, then we can run out of critical resources leading to cascading failures across multiple systems.
+It's common for software systems to make remote calls to software running in different processes, probably on different machines across a network. One of the big differences between in-memory calls and remote calls is that remote calls can fail, or hang without a response until some timeout limit is reached. What's worse is if we have many callers on an unresponsive supplier, then we can run out of critical resources leading to cascading failures across multiple systems.
 
 ## States
 
