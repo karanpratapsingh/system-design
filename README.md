@@ -114,7 +114,7 @@ Now, let's learn about the different versions of IP addresses:
 
 ### IPv4
 
-The original Internet Protocol is IPv4 which uses a 32-bit numeric dot-decimal notation that only allows for around 4 billion IP addresses. Initially, it was more than enough but as internet adoption grew we needed something better.
+The original Internet Protocol is IPv4 which uses a 32-bit numeric dot-decimal notation that only allows for around 4 billion IP addresses. Initially, it was more than enough but as internet adoption grew, we needed something better.
 
 _Example: `102.22.192.181`_
 
@@ -150,7 +150,7 @@ _Example: They are usually used for important things like reliable geo-location 
 
 ### Dynamic
 
-A dynamic IP address changes from time to time and is not always the same. It has been assigned by a [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) server. Dynamic IP addresses are the most common type of internet protocol addresses. They are cheaper to deploy and allow us to reuse IP addresses within a network as needed.
+A dynamic IP address changes from time to time and is not always the same. It has been assigned by a [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) server. Dynamic IP addresses are the most common type of internet protocol address. They are cheaper to deploy and allow us to reuse IP addresses within a network as needed.
 
 _Example: They are more commonly used for consumer equipment and personal use._
 
@@ -159,8 +159,6 @@ _Example: They are more commonly used for consumer equipment and personal use._
 The OSI Model is a logical and conceptual model that defines network communication used by systems open to interconnection and communication with other systems. The Open System Interconnection (OSI Model) also defines a logical network and effectively describes computer packet transfer by using various layers of protocols.
 
 The OSI Model can be seen as a universal language for computer networking. It's based on the concept of splitting up a communication system into seven abstract layers, each one stacked upon the last.
-
-![osi-model](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/osi-model/osi-model.png)
 
 ## Why does the OSI model matter?
 
@@ -176,6 +174,8 @@ While this model is not directly implemented in the TCP/IP networks that are mos
 ## Layers
 
 The seven abstraction layers of the OSI model can be defined as follows, from top to bottom:
+
+![osi-model](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/osi-model/osi-model.png)
 
 ### Application
 
@@ -252,14 +252,14 @@ DNS lookup involves the following eight steps:
 
 1. A client types [example.com](http://example.com) into a web browser, the query travels to the internet and is received by a DNS resolver.
 2. The resolver then recursively queries a DNS root nameserver.
-3. The root server responds to the resolver with the address of a Top Level Domain (TLD).
+3. The root server responds to the resolver with the address of a Top-Level Domain (TLD).
 4. The resolver then makes a request to the `.com` TLD.
 5. The TLD server then responds with the IP address of the domain's nameserver, [example.com](http://example.com).
 6. Lastly, the recursive resolver sends a query to the domain's nameserver.
 7. The IP address for [example.com](http://example.com) is then returned to the resolver from the nameserver.
 8. The DNS resolver then responds to the web browser with the IP address of the domain requested initially.
 
-Once the IP address has been resolved, the client should be able to request content from the resolved IP address. For example, the resolved IP may return a webpage to be rendered in the browser
+Once the IP address has been resolved, the client should be able to request content from the resolved IP address. For example, the resolved IP may return a webpage to be rendered in the browser.
 
 ## Server types
 
@@ -304,7 +304,7 @@ In an iterative query, a DNS client provides a hostname, and the DNS Resolver re
 
 A non-recursive query is a query in which the DNS Resolver already knows the answer. It either immediately returns a DNS record because it already stores it in a local cache, or queries a DNS Name Server which is authoritative for the record, meaning it definitely holds the correct IP for that hostname. In both cases, there is no need for additional rounds of queries (like in recursive or iterative queries). Rather, a response is immediately returned to the client.
 
-## Records Types
+## Record Types
 
 DNS records (aka zone files) are instructions that live in authoritative DNS servers and provide information about a domain including what IP address is associated with that domain and how to handle requests for that domain.
 
@@ -407,7 +407,7 @@ Software load balancers are widely used and are available either as installable 
 
 As the name implies, a hardware load balancer relies on physical, on-premises hardware to distribute application and network traffic. These devices can handle a large volume of traffic but often carry a hefty price tag and are fairly limited in terms of flexibility.
 
-Hardware load balancers include proprietary firmware that requires maintenance and updates as new versions and security patches are released.
+Hardware load balancers include proprietary firmware that requires maintenance and updates as new versions, and security patches are released.
 
 ### DNS
 
@@ -520,7 +520,7 @@ Four key advantages of cluster computing are as follows:
 
 Load balancing shares some common traits with clustering, but they are different processes. Clustering provides redundancy and boosts capacity and availability. Servers in a cluster are aware of each other and work together toward a common purpose. But with load balancing, servers are not aware of each other. Instead, they react to the requests they receive from the load balancer.
 
-We can employ load balancing in conjunction with clustering but it also is applicable in cases involving independent servers that share a common purpose such as to run a website, business application, web service, or some other IT resource.
+We can employ load balancing in conjunction with clustering, but it also is applicable in cases involving independent servers that share a common purpose such as to run a website, business application, web service, or some other IT resource.
 
 ## Challenges
 
@@ -534,9 +534,9 @@ Additionally, storage becomes more difficult to manage, a shared storage device 
 
 Clustering is commonly used in the industry, and often many technologies offer some sort of clustering mode. For example:
 
-- Containers (eg. [Kubernetes](https://kubernetes.io), [Amazon ECS](https://aws.amazon.com/ecs))
-- Databases (eg. [Cassandra](https://cassandra.apache.org/_/index.html), [MongoDB](https://www.mongodb.com))
-- Cache (eg. [Redis](https://redis.io/docs/manual/scaling))
+- Containers (e.g. [Kubernetes](https://kubernetes.io), [Amazon ECS](https://aws.amazon.com/ecs))
+- Databases (e.g. [Cassandra](https://cassandra.apache.org/_/index.html), [MongoDB](https://www.mongodb.com))
+- Cache (e.g. [Redis](https://redis.io/docs/manual/scaling))
 
 # Caching
 
@@ -550,7 +550,7 @@ Caches take advantage of the locality of reference principle _"recently requeste
 
 ## Caching and Memory
 
-Similar to a computer's memory, a cache is a compact, fast-performing memory that stores data in a hierarchy of levels, starting at level one, and progressing from there sequentially. They are labeled as L1, L2, L3, and so on. A cache also gets written if requested, such as when there has been an update and new content needs to be saved to the cache, replacing the older content that was saved.
+Like a computer's memory, a cache is a compact, fast-performing memory that stores data in a hierarchy of levels, starting at level one, and progressing from there sequentially. They are labeled as L1, L2, L3, and so on. A cache also gets written if requested, such as when there has been an update and new content needs to be saved to the cache, replacing the older content that was saved.
 
 No matter whether the cache is read or written, it's done one block at a time. Each block also has a tag that includes the location where the data was stored in the cache. When data is requested from the cache, a search occurs through the tags to find the specific content that's needed in level one (L1) of the memory. If the correct data isn't found, more searches are conducted in L2.
 
@@ -574,7 +574,7 @@ A warm cache is used to describe data that's found in L2 or L3. It's not as fast
 
 ### Cache miss
 
-A cache miss refers to the instance when the memory is searched and the data isn't found. When this happens, the content is transferred and written into the cache.
+A cache miss refers to the instance when the memory is searched, and the data isn't found. When this happens, the content is transferred and written into the cache.
 
 ## Cache Invalidation
 
@@ -687,9 +687,9 @@ Content Delivery Network (CDN) increases content availability and redundancy whi
 
 In a CDN, the origin server contains the original versions of the content while the edge servers are numerous and distributed across various locations around the world.
 
-To minimize the distance between the visitors and the website's server, a CDN stores a cached version of its content in multiple geographical locations known as edge locations. Each edge location contains a number of caching servers responsible for content delivery to visitors within its proximity.
+To minimize the distance between the visitors and the website's server, a CDN stores a cached version of its content in multiple geographical locations known as edge locations. Each edge location contains several caching servers responsible for content delivery to visitors within its proximity.
 
-Once the static assets are cached on all the CDN servers for a particular location, all subsequent website visitor requests for static assets will be delivered from these edge servers instead of the origin, thus reducing origin load and improving scalability.
+Once the static assets are cached on all the CDN servers for a particular location, all subsequent website visitor requests for static assets will be delivered from these edge servers instead of the origin, thus reducing the origin load and improving scalability.
 
 For example, when someone in the UK requests our website which might be hosted in the USA, they will be served from the closest edge location such as the London edge location. This is much quicker than having the visitor make a complete request to the origin server which will increase the latency.
 
@@ -773,7 +773,7 @@ Here are some advantages of using a reverse proxy:
 
 ## Load balancer vs Reverse Proxy
 
-Wait, isn't reverse proxy similar to a load balancer? Well, no as a load balancer is useful when we have multiple servers. Often, load balancers route traffic to a set of servers serving the same function, while, reverse proxies can be useful even with just one web server or application server. A reverse proxy can also act as a load balancer but not the other way around.
+Wait, isn't reverse proxy similar to a load balancer? Well, no as a load balancer is useful when we have multiple servers. Often, load balancers route traffic to a set of servers serving the same function, while reverse proxies can be useful even with just one web server or application server. A reverse proxy can also act as a load balancer but not the other way around.
 
 ## Examples
 
