@@ -923,7 +923,7 @@ Volume is a fixed amount of storage on a disk or tape. The term volume is often 
 
 File storage is a solution to store data as files and present it to its final users as a hierarchical directories structure. The main advantage is to provide a user-friendly solution to store and retrieve files. To locate a file in file storage, the complete path of the file is required. It is economical and easily structured and is usually found on hard drives, which means that they appear exactly the same for the user and on the hard drive.
 
-**Example**: [Amazon EFS](https://aws.amazon.com/efs), [Azure files](https://azure.microsoft.com/en-in/services/storage/files), [Google Cloud Filestore](https://cloud.google.com/filestore), etc.
+Example: [Amazon EFS](https://aws.amazon.com/efs), [Azure files](https://azure.microsoft.com/en-in/services/storage/files), [Google Cloud Filestore](https://cloud.google.com/filestore), etc.
 
 ## Block storage
 
@@ -931,13 +931,13 @@ Block storage divides data into blocks (chunks) and stores them as separate piec
 
 Block storage also decouples data from user environments, allowing that data to be spread across multiple environments. This creates multiple paths to the data and allows the user to retrieve it quickly. When a user or application requests data from a block storage system, the underlying storage system reassembles the data blocks and presents the data to the user or application
 
-**Example**: [Amazon EBS](https://aws.amazon.com/ebs).
+Example: [Amazon EBS](https://aws.amazon.com/ebs).
 
 ## Object Storage
 
 Object storage, which is also known as object-based storage, breaks data files up into pieces called objects. It then stores those objects in a single repository, which can be spread out across multiple networked systems.
 
-**Example**: [Amazon S3](https://aws.amazon.com/s3), [Azure Blob Storage](https://azure.microsoft.com/en-in/services/storage/blobs), [Google Cloud Storage](https://cloud.google.com/storage), etc.
+Example: [Amazon S3](https://aws.amazon.com/s3), [Azure Blob Storage](https://azure.microsoft.com/en-in/services/storage/blobs), [Google Cloud Storage](https://cloud.google.com/storage), etc.
 
 ## NAS
 
@@ -3716,7 +3716,7 @@ $$
 100 \space million \times 10\space years \times 12 \space months = 12 \space billion
 $$
 
-Like earlier, if we assume each stored recorded will be approximately 500 bytes. We will need around 6TB of storage:
+Like earlier, if we assume each stored record will be approximately 500 bytes. We will need around 6TB of storage:
 
 $$
 12 \space billion \times 500 \space bytes = 6 \space TB
@@ -3789,7 +3789,7 @@ createURL(apiKey: string, originalURL: string, expiration?: Date): string
 
 API Key (`string`): API key provided by the user.
 
-Original Url (`string`): Original URL to be shortened.
+Original URL (`string`): Original URL to be shortened.
 
 Expiration (`Date`): Expiration date of the new URL _(optional)_.
 
@@ -3809,7 +3809,7 @@ getURL(apiKey: string, shortURL: string): string
 
 API Key (`string`): API key provided by the user.
 
-Short Url (`string`): Short URL mapped to the original URL.
+Short URL (`string`): Short URL mapped to the original URL.
 
 **Returns**
 
@@ -3827,7 +3827,7 @@ deleteURL(apiKey: string, shortURL: string): boolean
 
 API Key (`string`): API key provided by the user.
 
-Short Url (`string`): Short URL to be deleted.
+Short URL (`string`): Short URL to be deleted.
 
 **Returns**
 
@@ -5064,21 +5064,21 @@ _Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/cours
 
 ### Video processing
 
+![video-processing-pipeline](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/netflix/video-processing-pipeline.png)
+
 There are so many variables in play when it comes to processing a video. For example, an average data size of two-hour raw 8K footage from a high-end camera can easily be up to 4 TB, thus we need to have some kind of processing to reduce both storage and delivery costs.
 
 Here's how we can process videos once they're uploaded by the content team (or users in YouTube's case) and are queued for processing in our [message queue](https://karanpratapsingh.com/courses/system-design/message-queues).
-
-![video-processing-pipeline](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/netflix/video-processing-pipeline.png)
 
 Let's discuss how this works:
 
 - **File Chunker**
 
+![file-chunking](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/netflix/file-chunking.png)
+
 This is the first step of our processing pipeline. File chunking is the process of splitting a file into smaller pieces called chunks. It can help us eliminate duplicate copies of repeating data on storage, and reduces the amount of data sent over the network by only selecting changed chunks.
 
 Usually, a video file can be split into equal size chunks based on timestamps but Netflix instead splits chunks based on scenes. This slight variation becomes a huge factor for a better user experience since whenever the client requests a chunk from the server, there is a lower chance of interruption as a complete scene will be retrieved.
-
-![file-chunking](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-V/netflix/file-chunking.png)
 
 - **Content Filter**
 
@@ -5243,7 +5243,7 @@ We will design our system for two types of users: Customers and Drivers.
 
 **Drivers**
 
-- Drivers should be able to accept or deny the customer requested ride.
+- Drivers should be able to accept or deny the customer-requested ride.
 - Once a driver accepts the ride, they should see the pickup location of the customer.
 - Drivers should be able to mark the trip as complete on reaching the destination.
 
@@ -5377,7 +5377,7 @@ Destination (`Tuple<float>`): Tuple containing the latitude and longitude of the
 
 **Returns**
 
-Result (`boolean`): Represents whether the operation was successful or not.
+Result (`Ride`): Associated ride information of the trip.
 
 ### Cancel the Ride
 
