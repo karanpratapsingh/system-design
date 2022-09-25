@@ -2285,7 +2285,7 @@ Some common disadvantages of monoliths are:
 - Requires commitment to a particular technology stack.
 - On each update, the entire application is redeployed.
 - Reduced reliability as a single bug can bring down the entire system.
-- Difficult to scale or adopt technologies new technologies.
+- Difficult to scale or adopt new technologies.
 
 ## Modular monoliths
 
