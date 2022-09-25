@@ -4059,7 +4059,7 @@ _Note: Make sure to check any scale or traffic-related assumptions with your int
 
 ### Traffic
 
-Let us assume we have 50 million daily active users (DAU) and on average each user sends at least 10 messages to 4 different people every day. This gives us 2 billion messages per day.
+Let us assume we have 50 million daily active users (DAU) and on average each user sends at least 10 messages to 2 different people every day. This gives us 2 billion messages per day.
 
 $$
 50 \space million \times 20 \space messages = 2 \space billion/day
@@ -4448,7 +4448,7 @@ _Note: Make sure to check any scale or traffic-related assumptions with your int
 This will be a read-heavy system, let us assume we have 1 billion total users with 200 million daily active users (DAU), and on average each user tweets 5 times a day. This gives us 1 billion tweets per day.
 
 $$
-200 \space million \times 5 \space messages = 1 \space billion/day
+200 \space million \times 5 \space tweets = 1 \space billion/day
 $$
 
 Tweets can also contain media such as images, or videos. We can assume that 10 percent of tweets are media files shared by the users, which gives us additional 100 million files we would need to store.
