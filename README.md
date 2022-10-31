@@ -1739,7 +1739,7 @@ Data partitioning is a technique to break up a database into many smaller parts.
 
 ### Methods
 
-There are many different ways one could use to decide how to break up an application database into multiple smaller DBs. Below are three of the most popular methods used by various large-scale applications:
+There are many different ways one could use to decide how to break up an application database into multiple smaller DBs. Below are two of the most popular methods used by various large-scale applications:
 
 **Horizontal Partitioning (or Sharding)**
 
