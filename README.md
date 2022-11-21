@@ -4059,16 +4059,16 @@ _Note: Make sure to check any scale or traffic-related assumptions with your int
 
 ### Traffic
 
-Let us assume we have 50 million daily active users (DAU) and on average each user sends at least 10 messages to 2 different people every day. This gives us 2 billion messages per day.
+Let us assume we have 50 million daily active users (DAU) and on average each user sends at least 10 messages to 4 different people every day. This gives us 2 billion messages per day.
 
 $$
-50 \space million \times 20 \space messages = 2 \space billion/day
+50 \space million \times 40 \space messages = 2 \space billion/day
 $$
 
-Messages can also contain media such as images, videos, or other files. We can assume that 5 percent of messages are media files shared by the users, which gives us additional 200 million files we would need to store.
+Messages can also contain media such as images, videos, or other files. We can assume that 5 percent of messages are media files shared by the users, which gives us additional 100 million files we would need to store.
 
 $$
-5 \space percent \times 2 \space billion = 200 \space million/day
+5 \space percent \times 2 \space billion = 100 \space million/day
 $$
 
 **What would be Requests Per Second (RPS) for our system?**
