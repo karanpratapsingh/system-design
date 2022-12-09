@@ -5040,7 +5040,7 @@ This service handles user-related concerns such as authentication and user infor
 
 **Stream Service**
 
-The tweet service will handle video streaming-related functionality.
+The stream service will handle video streaming-related functionality.
 
 **Search Service**
 
