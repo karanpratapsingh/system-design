@@ -4087,7 +4087,7 @@ $$
 2 \space billion \times 100 \space bytes = \sim 200 \space GB/day
 $$
 
-As per our requirements, we also know that around 5 percent of our daily messages (100 million) are media files. If we assume each file is 50 KB on average, we will require 10 TB of storage every day.
+As per our requirements, we also know that around 5 percent of our daily messages (100 million) are media files. If we assume each file is 100 KB on average, we will require 10 TB of storage every day.
 
 $$
 100 \space million \times 100 \space KB = 10 \space TB/day
@@ -4476,7 +4476,7 @@ $$
 We also know that around 10 percent of our daily messages (100 million) are media files per our requirements. If we assume each file is 50 KB on average, we will require 5 TB of storage every day.
 
 $$
-100 \space million \times 100 \space KB = 5 \space TB/day
+100 \space million \times 50 \space KB = 5 \space TB/day
 $$
 
 And for 10 years, we will require about 19 PB of storage.
