@@ -5658,6 +5658,7 @@ Now that you know the fundamentals of System Design, here are some additional re
 - [Microservices](https://microservices.io) (by Chris Richardson)
 - [Serverless computing](https://en.wikipedia.org/wiki/Serverless_computing)
 - [Kubernetes](https://kubernetes.io)
+- [System Design Roadmap](https://roadmap.sh/system-design)
 
 It is also recommended to actively follow engineering blogs of companies putting what we learned in the course into practice at scale:
 
