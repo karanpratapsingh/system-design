@@ -4860,10 +4860,10 @@ $$
 200 \space million \times 5 \space videos = 1 \space billion/day
 $$
 
-Assuming a `200:1` read/write ratio, about 50 million videos will be uploaded every day.
+Assuming a `200:1` read/write ratio, about 5 million videos will be uploaded every day.
 
 $$
-\frac{1}{200} \times 1 \space billion = 50 \space million/day
+\frac{1}{200} \times 1 \space billion = 5 \space million/day
 $$
 
 **What would be Requests Per Second (RPS) for our system?**
@@ -4876,24 +4876,24 @@ $$
 
 ### Storage
 
-If we assume each video is 100 MB on average, we will require about 5 PB of storage every day.
+If we assume each video is 100 MB on average, we will require about 500 TB of storage every day.
 
 $$
-50 \space million \times 100 \space MB = 5 \space PB/day
+5 \space million \times 100 \space MB = 500 \space TB/day
 $$
 
-And for 10 years, we will require an astounding 18,250 PB of storage.
+And for 10 years, we will require an astounding 1,825 PB of storage.
 
 $$
-5 \space PB \times 365 \space days \times 10 \space years = \sim 18,250 \space PB
+500 \space TB \times 365 \space days \times 10 \space years = \sim 1,825 \space PB
 $$
 
 ### Bandwidth
 
-As our system is handling 5 PB of ingress every day, we will require a minimum bandwidth of around 58 GB per second.
+As our system is handling 500 TB of ingress every day, we will require a minimum bandwidth of around 5.8 GB per second.
 
 $$
-\frac{5 \space PB}{(24 \space hrs \times 3600 \space seconds)} = \sim 58 \space GB/second
+\frac{500 \space TB}{(24 \space hrs \times 3600 \space seconds)} = \sim 5.8 \space GB/second
 $$
 
 ### High-level estimate
@@ -4904,9 +4904,9 @@ Here is our high-level estimate:
 | ------------------------- | ----------- |
 | Daily active users (DAU)  | 200 million |
 | Requests per second (RPS) | 12K/s       |
-| Storage (per day)         | ~5 PB       |
-| Storage (10 years)        | ~18,250 PB  |
-| Bandwidth                 | ~58 GB/s    |
+| Storage (per day)         | ~500 TB     |
+| Storage (10 years)        | ~1,825 PB   |
+| Bandwidth                 | ~5.8 GB/s   |
 
 ## Data model design
 
