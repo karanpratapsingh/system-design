@@ -4,7 +4,7 @@
 
 <div align="center">
 <h1>System Design Course</h1>
-<p align="center">
+</div>
 
 
 > Learn how to design systems at scale and prepare for system design interviews.
