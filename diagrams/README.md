@@ -1,3 +1,6 @@
 # System Design Diagrams
 
-Import the `*.excalidraw` files in [Excalidraw](https://excalidraw.com) to view, edit or export the diagrams.
+#### https://lucid.app/     ✅  
+#### https://app.diagrams.net
+
+Import the `*.excalidraw` files in [Excalidraw](https://excalidraw.com/) to view, edit or export the diagrams.
