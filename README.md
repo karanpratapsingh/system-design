@@ -1,6 +1,11 @@
-# System Design Course
+<sup> **Disclaimer**: This webpage is a modification of [@karanpratapsingh](https://github.com/karanpratapsingh)'s [system-design](https://github.com/karanpratapsingh/system-design) repository with [CC BY-NC-ND 4.0](https://github.com/karanpratapsingh/system-design/commits/main/LICENSE) [license](https://drive.google.com/file/d/1XNunkcoiM90bUjI3LbM8giyVPWc8xVNE/view). I have created this repository only for my personal learning purpose. I do not hold any right to distribute or share the content. Please contact the original creator for any permissions.</sup>
 
-<sup> Disclaimer: This webpage is a modification of [@karanpratapsingh](https://github.com/karanpratapsingh)'s [system-design](https://github.com/karanpratapsingh/system-design) repository with [CC BY-NC-ND 4.0](https://github.com/karanpratapsingh/system-design/commits/main/LICENSE) [license](https://drive.google.com/file/d/1XNunkcoiM90bUjI3LbM8giyVPWc8xVNE/view). I have created this repository only for my personal learning purpose. I do not hold any right to distribute or share the content. Please contact the original creator for any permissions.</sup>
+---
+
+<div align="center">
+<h1>System Design Course</h1>
+<p align="center">
+
 
 > Learn how to design systems at scale and prepare for system design interviews.
 
