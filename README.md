@@ -4217,7 +4217,7 @@ Result (`boolean`): Represents whether the operation was successful or not.
 
 ### Join or leave a group
 
-Send a message from a user to a channel (chat or group).
+This API will join or remove a user given by `userID` to a channel (chat or group) given by `channelID`.
 
 ```tsx
 joinGroup(userID: UUID, channelID: UUID): boolean
