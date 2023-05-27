@@ -3519,7 +3519,7 @@ System design is a very extensive topic and system design interviews are designe
 
 Expectations are quite different at different engineering levels as well. This is because someone with a lot of practical experience will approach it quite differently from someone who's new in the industry. As a result, it's hard to come up with a single strategy that will help us stay organized during the interview.
 
-Let's look at some common strategies for the system design interviews:
+Let's look at some common strategies for system design interviews:
 
 ## Requirements clarifications
 
