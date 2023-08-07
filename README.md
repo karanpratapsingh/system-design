@@ -1854,11 +1854,11 @@ But why do we need sharding? Here are some advantages:
 
 - **Complexity**: Sharding increases the complexity of the system in general.
 - **Joins across shards**: Once a database is partitioned and spread across multiple machines it is often not feasible to perform joins that span multiple database shards. Such joins will not be performance efficient since data has to be retrieved from multiple servers.
-- **Rebalancing**: If the data distribution is not uniform or there is a lot of load on a single shard, in such cases we have to rebalance our shards so that the requests are as equally distributed among the shards as possible.
+- **Rebalancing**: If the data distribution is not uniform or there is a lot of load on a single shard, in such cases, we have to rebalance our shards so that the requests are as equally distributed among the shards as possible.
 
 ## When to use sharding?
 
-Here are some reasons where sharding might be the right choice:
+Here are some reasons why sharding might be the right choice:
 
 - Leveraging existing hardware instead of high-end machines.
 - Maintain data in distinct geographic regions.
@@ -1982,7 +1982,7 @@ Where,
 
 As VNodes help spread the load more evenly across the physical nodes on the cluster by diving the hash ranges into smaller subranges, this speeds up the re-balancing process after adding or removing nodes. This also helps us reduce the probability of hotspots.
 
-## Data replication
+## Data Replication
 
 To ensure high availability and durability, consistent hashing replicates each data item on multiple `N` nodes in the system where the value `N` is equivalent to the _replication factor_.
 
@@ -2278,7 +2278,7 @@ Message topics authenticate applications that try to publish content, this allow
 
 ## Examples
 
-Here are some technologies commonly used for publish-subscribe:
+Here are some commonly used publish-subscribe technologies:
 
 - [Amazon SNS](https://aws.amazon.com/sns)
 - [Google Pub/Sub](https://cloud.google.com/pubsub)
@@ -2344,7 +2344,7 @@ Some common disadvantages of monoliths are:
 - Reduced reliability as a single bug can bring down the entire system.
 - Difficult to scale or adopt technologies new technologies.
 
-## Modular monoliths
+## Modular Monoliths
 
 A Modular Monolith is an approach where we build and deploy a single application (that's the _Monolith_ part), but we build it in a way that breaks up the code into independent modules for each of the features needed in our application.
 
@@ -3576,7 +3576,7 @@ System design is a very extensive topic and system design interviews are designe
 
 Expectations are quite different at different engineering levels as well. Because someone with a lot of practical experience will approach it quite differently from someone who's new in the industry. As a result, it's hard to come up with a single strategy that will help us stay organized during the interview.
 
-Let's look at some common strategies for the system design interviews:
+Let's look at some common strategies for system design interviews:
 
 ## Requirements clarifications
 
@@ -4272,9 +4272,9 @@ Message (`Message`): The message (text, image, video, etc.) that the user wants 
 
 Result (`boolean`): Represents whether the operation was successful or not.
 
-### Join or leave a group
+### Join or leave a channel
 
-Send a message from a user to a channel (chat or group).
+Allows the user to join or leave a channel (chat or group).
 
 ```tsx
 joinGroup(userID: UUID, channelID: UUID): boolean
