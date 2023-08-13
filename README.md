@@ -1,4 +1,4 @@
-# System Design Course
+# System Design
 
 Hey, welcome to the course. I hope this course provides a great learning experience.
 
