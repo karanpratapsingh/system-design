@@ -320,7 +320,7 @@ There are more record types but for now, let's look at some of the most commonly
 - **NS (Name Server records)**: Stores the name server for a DNS entry.
 - **SOA (Start of Authority)**: Stores admin information about a domain.
 - **SRV (Service Location record)**: Specifies a port for specific services.
-- **PTR (Reverse-lookup Pointer records)**: Provides a domain name in reverse lookups.
+- **PTR (Reverse-lookup Pointer record)**: Provides a domain name in reverse lookups.
 - **CERT (Certificate record)**: Stores public key certificates.
 
 ## Subdomains
@@ -1595,7 +1595,7 @@ _The PACELC theorem was first described by [Daniel J. Abadi](https://scholar.goo
 
 PACELC theorem was developed to address a key limitation of the CAP theorem as it makes no provision for performance or latency.
 
-For example, according to the CAP theorem, a database can be considered Available if a query returns a response after 30 days. Obviously, such latency would be unacceptable for any real-world application.
+For example, according to the CAP theorem, a database can be considered available if a query returns a response after 30 days. Obviously, such latency would be unacceptable for any real-world application.
 
 # Transactions
 
@@ -2060,7 +2060,7 @@ Message brokers can validate, store, route, and deliver messages to the appropri
 Message brokers offer two basic message distribution patterns or messaging styles:
 
 - **[Point-to-Point messaging](https://karanpratapsingh.com/courses/system-design/message-queues)**: This is the distribution pattern utilized in message queues with a one-to-one relationship between the message's sender and receiver.
-- **[Publish-subscribe messaging](https://karanpratapsingh.com/courses/system-design/publish-subscribe)**: In this message distribution pattern, often referred to as _"pub/sub"_, the producer of each message publishes it to a topic, and multiple message consumers subscribe to topics from which they want to receive messages.
+- **[Publish-Subscribe messaging](https://karanpratapsingh.com/courses/system-design/publish-subscribe)**: In this message distribution pattern, often referred to as _"pub/sub"_, the producer of each message publishes it to a topic, and multiple message consumers subscribe to topics from which they want to receive messages.
 
 _We will discuss these messaging patterns in detail in the later tutorials._
 
@@ -3383,7 +3383,7 @@ Here are the most common disadvantages of OAuth 2.0:
 
 OAuth 2.0 is designed only for _authorization_, for granting access to data and features from one application to another. OpenID Connect (OIDC) is a thin layer that sits on top of OAuth 2.0 that adds login and profile information about the person who is logged in.
 
-When an Authorization Server supports OIDC, it is sometimes called an identity provider (IdP), since it provides information about the Resource Owner back to the Client. OpenID Connect is relatively new, resulting in lower adoption and industry implementation of best practices compared to OAuth.
+When an Authorization Server supports OIDC, it is sometimes called an Identity Provider (IdP), since it provides information about the Resource Owner back to the Client. OpenID Connect is relatively new, resulting in lower adoption and industry implementation of best practices compared to OAuth.
 
 ### Concepts
 
