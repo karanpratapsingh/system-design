@@ -2613,6 +2613,97 @@ We should consider using a Backend For Frontend (BFF) pattern when:
 - We want to optimize the backend for the requirements of a specific client.
 - Customizations are made to a general-purpose backend to accommodate multiple interfaces.
 
+#### Examples
+Let's consider an example where we have a basic e-commerce platform. This platform has a web interface for desktop users and a mobile application for mobile users. We have a general-purpose backend service that provides product information, user profiles, and order history.
+
+#### Without BFF
+
+Without a BFF, both the web interface and the mobile app would directly call the general-purpose backend service. Here's how the backend service might look for fetching product details:
+
+```json
+{
+  "productId": 1,
+  "productName": "Laptop",
+  "description": "A high-performance laptop",
+  "price": 999.99,
+  "stock": 20,
+  "reviews": [
+    {
+      "userId": 1,
+      "comment": "Great laptop!",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "comment": "Average performance.",
+      "rating": 3
+    }
+  ]
+}
+```
+
+However, the mobile app might not need all this information. It might only need `productId`, `productName`, and `price`.
+
+#### With BFF
+
+With a Backend For Frontend (BFF), we would create two separate backend services specifically for the web interface and the mobile app.
+
+##### BFF for Web
+
+The BFF for the web interface might return the product details as is, since the web interface can display more information:
+
+```json
+{
+  "productId": 1,
+  "productName": "Laptop",
+  "description": "A high-performance laptop",
+  "price": 999.99,
+  "stock": 20,
+  "reviews": [
+    {
+      "userId": 1,
+      "comment": "Great laptop!",
+      "rating": 5
+    },
+    {
+      "userId": 2,
+      "comment": "Average performance.",
+      "rating": 3
+    }
+  ]
+}
+```
+
+##### BFF for Mobile App
+
+On the other hand, the BFF for the mobile app might only return the necessary data:
+
+```json
+{
+  "productId": 1,
+  "productName": "Laptop",
+  "price": 999.99
+}
+```
+
+This way, both interfaces get only the data they need, formatted in the way they need it.
+
+#### GraphQL as a BFF
+
+If we use GraphQL, we can define the structure of the data we want to fetch. This serves as an excellent BFF layer because it allows frontend developers to request only the fields they need, thus reducing over-fetching or under-fetching of data.
+
+For example, the mobile app could use the following GraphQL query:
+
+```graphql
+query {
+  product(id: 1) {
+    productId
+    productName
+    price
+  }
+}
+```
+
 ## Examples
 
 Following are some widely used gateways technologies:
