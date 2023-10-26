@@ -1,6 +1,6 @@
-This repository contains content that is copied or derived from other repositories. The original sources are attributed in the README file or in the source code comments. The copied content is licensed under the same terms as the original sources, unless otherwise specified.
+This repository contains content that is copied or derived from other repositories. The original sources are attributed in the README file or in the source code comments. Unless otherwise specified, the copied content is licensed under the same terms as the original sources.
 
-**Please note that I do not hold any right to distribute or share the content of this repository. I have created this repository only for my personal learning purpose.** Please contact the original creator for any permissions.
+**Please note that I do not hold any right to distribute or share the content of this repository. I have created this repository only for my personal learning purposes.** Please contact the original creator for any permissions.
 
 1. Contents of ```./grokking system design``` directory taken from https://github.com/Jeevan-kumar-Raj/Grokking-System-Design.
 2. Contents of ```./system design primer``` directory taken from https://github.com/donnemartin/system-design-primer.
