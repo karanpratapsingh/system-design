@@ -167,7 +167,7 @@ The OSI Model is a logical and conceptual model that defines network communicati
 
 The OSI Model can be seen as a universal language for computer networking. It's based on the concept of splitting up a communication system into seven abstract layers, each one stacked upon the last.
 
-![osi-model](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/osi-model/osi-model.png)
+![osi-model](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/osi-model/osi-model.png)
 
 ## Why does the OSI model matter?
 
@@ -218,7 +218,7 @@ This layer includes the physical equipment involved in the data transfer, such a
 
 Transmission Control Protocol (TCP) is connection-oriented, meaning once a connection has been established, data can be transmitted in both directions. TCP has built-in systems to check for errors and to guarantee data will be delivered in the order it was sent, making it the perfect protocol for transferring information like still images, data files, and web pages.
 
-![tcp](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/tcp-and-udp/tcp.png)
+![tcp](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/tcp-and-udp/tcp.png)
 
 But while TCP is instinctively reliable, its feedback mechanisms also result in a larger overhead, translating to greater use of the available bandwidth on the network.
 
@@ -226,7 +226,7 @@ But while TCP is instinctively reliable, its feedback mechanisms also result in 
 
 User Datagram Protocol (UDP) is a simpler, connectionless internet protocol in which error-checking and recovery services are not required. With UDP, there is no overhead for opening a connection, maintaining a connection, or terminating a connection. Data is continuously sent to the recipient, whether or not they receive it.
 
-![udp](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/tcp-and-udp/udp.png)
+![udp](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/tcp-and-udp/udp.png)
 
 It is largely preferred for real-time communications like broadcast or multicast network transmission. We should use UDP over TCP when we need the lowest latency and late data is worse than the loss of data.
 
@@ -254,7 +254,7 @@ This brings us to Domain Name System (DNS) which is a hierarchical and decentral
 ## [How DNS works](https://youtu.be/vhfRArT11jc)
 Video: **https://youtu.be/vhfRArT11jc**
 
-![how-dns-works](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/domain-name-system/how-dns-works.png)
+![how-dns-works](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/domain-name-system/how-dns-works.png)
 
 DNS lookup involves the following eight steps:
 
@@ -374,11 +374,11 @@ These are some widely used managed DNS solutions:
 
 Load balancing lets us distribute incoming network traffic across multiple resources ensuring high availability and reliability by sending requests only to resources that are online. This provides the flexibility to add or subtract resources as demand dictates.
 
-![load-balancing](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/load-balancer.png)
+![load-balancing](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/load-balancer.png)
 
 For additional scalability and redundancy, we can try to load balance at each layer of our system:
 
-![load-balancing-layers](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/load-balancer-layers.png)
+![load-balancing-layers](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/load-balancer-layers.png)
 
 ## But why?
 
@@ -454,7 +454,7 @@ As you must've already guessed, the load balancer itself can be a single point o
 
 And, if there's a failure detection and the _active_ load balancer fails, another _passive_ load balancer can take over which will make our system more fault-tolerant.
 
-![redundant-load-balancing](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/redundant-load-balancer.png)
+![redundant-load-balancing](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/load-balancing/redundant-load-balancer.png)
 
 ## Features
 
@@ -490,7 +490,7 @@ At a high level, a computer cluster is a group of two or more computers, or node
 
 To build a computer cluster, the individual nodes should be connected to a network to enable internode communication. The software can then be used to join the nodes together and form a cluster. It may have a shared storage device and/or local storage on each node.
 
-![cluster](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/clustering/cluster.png)
+![cluster](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/clustering/cluster.png)
 
 Typically, at least one node is designated as the leader node and acts as the entry point to the cluster. The leader node may be responsible for delegating incoming work to the other nodes and, if necessary, aggregating the results and returning a response to the user.
 
@@ -510,13 +510,13 @@ The two most commonly used high availability (HA) clustering configurations are 
 
 ### Active-Active
 
-![active-active](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/clustering/active-active.png)
+![active-active](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/clustering/active-active.png)
 
 An active-active cluster is typically made up of at least two nodes, both actively running the same kind of service simultaneously. The main purpose of an active-active cluster is to achieve load balancing. A load balancer distributes workloads across all nodes to prevent any single node from getting overloaded. Because there are more nodes available to serve, there will also be an improvement in throughput and response times.
 
 ### Active-Passive
 
-![active-passive](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/clustering/active-passive.png)
+![active-passive](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/clustering/active-passive.png)
 
 Like the active-active cluster configuration, an active-passive cluster also consists of at least two nodes. However, as the name _active-passive_ implies, not all nodes are going to be active. For example, in the case of two nodes, if the first node is already active, then the second node must be passive or on standby.
 
@@ -555,7 +555,7 @@ Clustering is commonly used in the industry, and often many technologies offer s
 
 _"There are only two hard things in Computer Science: cache invalidation and naming things." - Phil Karlton_
 
-![caching](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/caching/caching.png)
+![caching](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/caching/caching.png)
 
 A cache's primary purpose is to increase data retrieval performance by reducing the need to access the underlying slower storage layer. Trading off capacity for speed, a cache typically stores a subset of data transiently, in contrast to databases whose data is usually complete and durable.
 
@@ -595,7 +595,7 @@ Cache invalidation is a process where the computer system declares the cache ent
 
 ### Write-through cache
 
-![write-through-cache](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-through-cache.png)
+![write-through-cache](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-through-cache.png)
 
 Data is written into the cache and the corresponding database simultaneously.
 
@@ -605,7 +605,7 @@ Data is written into the cache and the corresponding database simultaneously.
 
 ### Write-around cache
 
-![write-around-cache](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-around-cache.png)
+![write-around-cache](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-around-cache.png)
 
 Where write directly goes to the database or permanent storage, bypassing the cache.
 
@@ -615,7 +615,7 @@ Where write directly goes to the database or permanent storage, bypassing the ca
 
 ### Write-back cache
 
-![write-back-cache](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-back-cache.png)
+![write-back-cache](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/caching/write-back-cache.png)
 
 Where the write is only done to the caching layer and the write is confirmed as soon as the write to the cache completes. The cache then asynchronously syncs this write to the database.
 
@@ -636,13 +636,13 @@ Following are some of the most common cache eviction policies:
 
 ## Distributed Cache
 
-![distributed-cache](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/caching/distributed-cache.png)
+![distributed-cache](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/caching/distributed-cache.png)
 
 A distributed cache is a system that pools together the random-access memory (RAM) of multiple networked computers into a single in-memory data store used as a data cache to provide fast access to data. While most caches are traditionally in one physical server or hardware component, a distributed cache can grow beyond the memory limits of a single computer by linking together multiple computers.
 
 ## Global Cache
 
-![global-cache](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/caching/global-cache.png)
+![global-cache](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/caching/global-cache.png)
 
 As the name suggests, we will have a single shared cache that all the application nodes will use. When the requested data is not found in the global cache, it's the responsibility of the cache to find out the missing piece of data from the underlying data store.
 
@@ -688,7 +688,7 @@ Here are some commonly used technologies for caching:
 
 A content delivery network (CDN) is a geographically distributed group of servers that work together to provide fast delivery of internet content. Generally, static files such as HTML/CSS/JS, photos, and videos are served from CDN.
 
-![cdn-map](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/content-delivery-network/cdn-map.png)
+![cdn-map](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/content-delivery-network/cdn-map.png)
 
 ## Why use a CDN?
 
@@ -696,7 +696,7 @@ Content Delivery Network (CDN) increases content availability and redundancy whi
 
 ## How does a CDN work?
 
-![cdn](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/content-delivery-network/cdn.png)
+![cdn](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/content-delivery-network/cdn.png)
 
 In a CDN, the origin server contains the original versions of the content while the edge servers are numerous and distributed across various locations around the world.
 
@@ -751,7 +751,7 @@ There are two types of proxies:
 
 A forward proxy, often called a proxy, proxy server, or web proxy is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman.
 
-![forward-proxy](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/proxy/forward-proxy.png)
+![forward-proxy](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/proxy/forward-proxy.png)
 
 **Advantages**
 
@@ -770,7 +770,7 @@ A reverse proxy is a server that sits in front of one or more web servers, inter
 
 The difference between a forward and reverse proxy is subtle but important. A simplified way to sum it up would be to say that a forward proxy sits in front of a client and ensures that no origin server ever communicates directly with that specific client. On the other hand, a reverse proxy sits in front of an origin server and ensures that no client ever communicates directly with that origin server.
 
-![reverse-proxy](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/proxy/reverse-proxy.png)
+![reverse-proxy](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/proxy/reverse-proxy.png)
 
 Introducing reverse proxy results in increased complexity. A single reverse proxy is a single point of failure, configuring multiple reverse proxies (i.e. a failover) further increases complexity.
 
@@ -861,7 +861,7 @@ A fault-tolerant system has no service interruption but a significantly higher c
 
 Scalability is the measure of how well a system responds to changes by adding or removing resources to meet demands.
 
-![scalability](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-I/scalability/scalability.png)
+![scalability](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-I/scalability/scalability.png)
 
 Let's discuss different types of scaling:
 
@@ -994,7 +994,7 @@ Data in a table is recorded in rows. There can be thousands or millions of rows 
 
 ## Types
 
-![database-types](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/databases-and-dbms/database-types.png)
+![database-types](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/databases-and-dbms/database-types.png)
 
 Below are different types of databases:
 
@@ -1281,7 +1281,7 @@ Replication is a process that involves sharing information to ensure consistency
 
 The master serves reads and writes, replicating writes to one or more slaves, which serve only reads. Slaves can also replicate additional slaves in a tree-like fashion. If the master goes offline, the system can continue to operate in read-only mode until a slave is promoted to a master or a new master is provisioned.
 
-![master-slave-replication](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/database-replication/master-slave-replication.png)
+![master-slave-replication](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/database-replication/master-slave-replication.png)
 
 ### Advantages
 
@@ -1300,7 +1300,7 @@ The master serves reads and writes, replicating writes to one or more slaves, wh
 
 Both masters serve reads/writes and coordinate with each other. If either master goes down, the system can continue to operate with both reads and writes.
 
-![master-master-replication](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/database-replication/master-master-replication.png)
+![master-master-replication](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/database-replication/master-master-replication.png)
 
 ### Advantages
 
@@ -1324,7 +1324,7 @@ In contrast, asynchronous replication copies the data to the replica after the d
 
 Indexes are well known when it comes to databases, they are used to improve the speed of data retrieval operations on the data store. An index makes the trade-offs of increased storage overhead, and slower writes (since we not only have to write the data but also have to update the index) for the benefit of faster reads. Indexes are used to quickly locate data without having to examine every row in a database table. Indexes can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access to ordered records.
 
-![indexes](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/indexes/indexes.png)
+![indexes](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/indexes/indexes.png)
 
 An index is a data structure that can be perceived as a table of contents that points us to the location where actual data lives. So when we create an index on a column of a table, we store that column and a pointer to the whole row in the index. Indexes are also used to create different views of the same data. For large data sets, this is an excellent way to specify different filters or sorting schemes without resorting to creating multiple additional copies of the data.
 
@@ -1334,7 +1334,7 @@ One quality that database indexes can have is that they can be **dense** or **sp
 
 In a dense index, an index record is created for every row of the table. Records can be located directly as each record of the index holds the search key value and the pointer to the actual record.
 
-![dense-index](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/indexes/dense-index.png)
+![dense-index](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/indexes/dense-index.png)
 
 Dense indexes require more maintenance than sparse indexes at write-time. Since every row must have an entry, the database must maintain the index on inserts, updates, and deletes. Having an entry for every row also means that dense indexes will require more memory. The benefit of a dense index is that values can be quickly found with just a binary search. Dense indexes also do not impose any ordering requirements on the data.
 
@@ -1342,7 +1342,7 @@ Dense indexes require more maintenance than sparse indexes at write-time. Since 
 
 In a sparse index, records are created only for some of the records.
 
-![sparse-index](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/indexes/sparse-index.png)
+![sparse-index](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/indexes/sparse-index.png)
 
 Sparse indexes require less maintenance than dense indexes at write-time since they only contain a subset of the values. This lighter maintenance burden means that inserts, updates, and deletes will be faster. Having fewer entries also means that the index will use less memory. Finding data is slower since a scan across the page typically follows the binary search. Sparse indexes are also optional when working with ordered data.
 
@@ -1648,7 +1648,7 @@ PACELC extends the CAP theorem by introducing latency (L) as an additional attri
 
 _The PACELC theorem was first described by [Daniel J. Abadi](https://scholar.google.com/citations?user=zxeEF2gAAAAJ)._
 
-![pacelc-theorem](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/pacelc-theorem/pacelc-theorem.png)
+![pacelc-theorem](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/pacelc-theorem/pacelc-theorem.png)
 
 PACELC theorem was developed to address a key limitation of the CAP theorem as it makes no provision for performance or latency.
 
@@ -1664,7 +1664,7 @@ _Usually, relational databases support ACID transactions, and non-relational dat
 
 A transaction in a database can be in one of the following states:
 
-![transaction-states](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/transactions/transaction-states.png)
+![transaction-states](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/transactions/transaction-states.png)
 
 ### Active
 
@@ -1709,7 +1709,7 @@ Now, let's look at some popular solutions for distributed transactions:
 
 ## Two-Phase commit
 
-![two-phase-commit](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/two-phase-commit.png)
+![two-phase-commit](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/two-phase-commit.png)
 
 The two-phase commit (2PC) protocol is a distributed algorithm that coordinates all the processes that participate in a distributed transaction on whether to commit or abort (roll back) the transaction.
 
@@ -1739,7 +1739,7 @@ Following problems may arise in the two-phase commit protocol:
 
 ## Three-phase commit
 
-![three-phase-commit](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/three-phase-commit.png)
+![three-phase-commit](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/three-phase-commit.png)
 
 Three-phase commit (3PC) is an extension of the two-phase commit where the commit phase is split into two phases. This helps with the blocking problem that occurs in the two-phase commit protocol.
 
@@ -1768,7 +1768,7 @@ The pre-commit phase accomplishes the following:
 
 ## Sagas
 
-![sagas](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/sagas.png)
+![sagas](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/distributed-transactions/sagas.png)
 
 A saga is a sequence of local transactions. Each local transaction updates the database and publishes a message or event to trigger the next local transaction in the saga. If a local transaction fails because it violates a business rule then the saga executes a series of compensating transactions that undo the changes that were made by the preceding local transactions.
 
@@ -1812,7 +1812,7 @@ In this tutorial, we will specifically focus on sharding.
 
 Sharding is a database architecture pattern related to _horizontal partitioning_, which is the practice of separating one table's rows into multiple different tables, known as _partitions_ or _shards_. Each partition has the same schema and columns, but also a subset of the shared data. Likewise, the data held in each is unique and independent of the data held in other partitions.
 
-![sharding](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/sharding/sharding.png)
+![sharding](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/sharding/sharding.png)
 
 The justification for data sharding is that, after a certain point, it is cheaper and more feasible to scale horizontally by adding more machines than to scale it vertically by adding powerful servers. Sharding can be implemented at both application or the database level.
 
@@ -1874,7 +1874,7 @@ Let's first understand the problem we're trying to solve.
 
 In traditional hashing-based distribution methods, we use a hash function to hash our partition keys (i.e. request ID or IP). Then if we use the modulo against the total number of nodes (server or databases). This will give us the node where we want to route our request.
 
-![simple-hashing](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/consistent-hashing/simple-hashing.png)
+![simple-hashing](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/consistent-hashing/simple-hashing.png)
 
 $$
 \begin{align*}
@@ -1908,7 +1908,7 @@ Now that we understand the problem, let's discuss consistent hashing in detail.
 
 Consistent Hashing is a distributed hashing scheme that operates independently of the number of nodes in a distributed hash table by assigning them a position on an abstract circle, or hash ring. This allows servers and objects to scale without affecting the overall system.
 
-![consistent-hashing](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/consistent-hashing/consistent-hashing.png)
+![consistent-hashing](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/consistent-hashing/consistent-hashing.png)
 
 Using consistent hashing, only `K/N` data would require re-distributing.
 
@@ -1956,7 +1956,7 @@ In order to ensure a more evenly distributed load, we can introduce the idea of 
 
 Instead of assigning a single position to a node, the hash range is divided into multiple smaller ranges, and each physical node is assigned several of these smaller ranges. Each of these subranges is considered a VNode. Hence, virtual nodes are basically existing physical nodes mapped multiple times across the hash ring to minimize changes to a node's assigned range.
 
-![virtual-nodes](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/consistent-hashing/virtual-nodes.png)
+![virtual-nodes](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/consistent-hashing/virtual-nodes.png)
 
 For this, we can use `k` number of hash functions.
 
@@ -2019,7 +2019,7 @@ Federation (or functional partitioning) splits up databases by function. The fed
 
 All of the components in a federation are tied together by one or more federal schemas that express the commonality of data throughout the federation. These federated schemas are used to specify the information that can be shared by the federation components and to provide a common basis for communication among them.
 
-![database-federation](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-II/database-federation/database-federation.png)
+![database-federation](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-II/database-federation/database-federation.png)
 
 Federation also provides a cohesive, unified view of data derived from multiple sources. The data sources for federated systems can include databases and various other forms of structured and unstructured data.
 
@@ -2055,7 +2055,7 @@ Below are some disadvantages of federated databases:
 
 N-tier architecture divides an application into logical layers and physical tiers. Layers are a way to separate responsibilities and manage dependencies. Each layer has a specific responsibility. A higher layer can use services in a lower layer, but not the other way around.
 
-![n-tier-architecture](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/n-tier-architecture/n-tier-architecture.png)
+![n-tier-architecture](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/n-tier-architecture/n-tier-architecture.png)
 
 Tiers are physically separated, running on separate machines. A tier can call to another tier directly, or use asynchronous messaging. Although each layer might be hosted in its own tier, that's not required. Several layers might be hosted on the same tier. Physically separating the tiers improves scalability and resiliency and adds latency from the additional network communication.
 
@@ -2108,7 +2108,7 @@ Below are some disadvantages of N-tier architecture:
 
 A message broker is a software that enables applications, systems, and services to communicate with each other and exchange information. The message broker does this by translating messages between formal messaging protocols. This allows interdependent services to _"talk"_ with one another directly, even if they were written in different languages or implemented on different platforms.
 
-![message-broker](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/message-brokers/message-broker.png)
+![message-broker](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/message-brokers/message-broker.png)
 
 Message brokers can validate, store, route, and deliver messages to the appropriate destinations. They serve as intermediaries between other applications, allowing senders to issue messages without knowing where the receivers are, whether or not they are active, or how many of them there are. This facilitates the decoupling of processes and services within systems.
 
@@ -2148,7 +2148,7 @@ A message queue is a form of service-to-service communication that facilitates a
 
 Queues are used to effectively manage requests in large-scale distributed systems. In small systems with minimal processing loads and small databases, writes can be predictably fast. However, in more complex and large systems writes can take an almost non-deterministic amount of time.
 
-![message-queue](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/message-queues/message-queue.png)
+![message-queue](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/message-queues/message-queue.png)
 
 ## Working
 
@@ -2227,7 +2227,7 @@ Following are some widely used message queues:
 
 Similar to a message queue, publish-subscribe is also a form of service-to-service communication that facilitates asynchronous communication. In a pub/sub model, any message published to a topic is pushed immediately to all the subscribers of the topic.
 
-![publish-subscribe](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/publish-subscribe/publish-subscribe.png)
+![publish-subscribe](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/publish-subscribe/publish-subscribe.png)
 
 The subscribers to the message topic often perform different functions, and can each do something different with the message in parallel. The publisher doesn't need to know who is using the information that it is broadcasting, and the subscribers don't need to know where the message comes from. This style of messaging is a bit different than message queues, where the component that sends the message often knows the destination it is sending to.
 
@@ -2287,7 +2287,7 @@ Here are some commonly used publish-subscribe technologies:
 
 An Enterprise Service Bus (ESB) is an architectural pattern whereby a centralized software component performs integrations between applications. It performs transformations of data models, handles connectivity, performs message routing, converts communication protocols, and potentially manages the composition of multiple requests. The ESB can make these integrations and transformations available as a service interface for reuse by new applications.
 
-![enterprise-service-bus](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/enterprise-service-bus/enterprise-service-bus.png)
+![enterprise-service-bus](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/enterprise-service-bus/enterprise-service-bus.png)
 
 ## Advantages
 
@@ -2322,7 +2322,7 @@ Below are some widely used Enterprise Service Bus (ESB) technologies:
 
 A monolith is a self-contained and independent application. It is built as a single unit and is responsible for not just a particular task, but can perform every step needed to satisfy a business need.
 
-![monolith](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/monolith.png)
+![monolith](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/monolith.png)
 
 ### Advantages
 
@@ -2354,7 +2354,7 @@ This approach reduces the dependencies of a module in such as way that we can en
 
 A microservices architecture consists of a collection of small, autonomous services where each service is self-contained and should implement a single business capability within a bounded context. A bounded context is a natural division of business logic that provides an explicit boundary within which a domain model exists.
 
-![microservices](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/microservices.png)
+![microservices](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/microservices.png)
 
 Each service has a separate codebase, which can be managed by a small development team. Services can be deployed independently and a team can update an existing service without rebuilding and redeploying the entire application.
 
@@ -2441,7 +2441,7 @@ Service-oriented architecture (SOA) defines a way to make software components re
 
 ## Why you don't need microservices
 
-![architecture-range](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/architecture-range.png)
+![architecture-range](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/monoliths-microservices/architecture-range.png)
 
 So, you might be wondering, monoliths seem like a bad idea to begin with, why would anyone use that?
 
@@ -2477,7 +2477,7 @@ Event-driven architectures have three key components:
 - **Event routers**: Filters and pushes the events to consumers.
 - **Event consumers**: Uses events to reflect changes in the system.
 
-![event-driven-architecture](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/event-driven-architecture/event-driven-architecture.png)
+![event-driven-architecture](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/event-driven-architecture/event-driven-architecture.png)
 
 _Note: Dots in the diagram represents different events in the system._
 
@@ -2533,7 +2533,7 @@ Here are some widely used technologies for implementing event-driven architectur
 
 Instead of storing just the current state of the data in a domain, use an append-only store to record the full series of actions taken on that data. The store acts as the system of record and can be used to materialize the domain objects.
 
-![event-sourcing](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/event-sourcing/event-sourcing.png)
+![event-sourcing](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/event-sourcing/event-sourcing.png)
 
 This can simplify tasks in complex domains, by avoiding the need to synchronize the data model and the business domain, while improving performance, scalability, and responsiveness. It can also provide consistency for transactional data, and maintain full audit trails and history that can enable compensating actions.
 
@@ -2566,7 +2566,7 @@ Command Query Responsibility Segregation (CQRS) is an architectural pattern that
 
 In CQRS, a _command_ is an instruction, a directive to perform a specific task. It is an intention to change something and doesn't return a value, only an indication of success or failure. And, a _query_ is a request for information that doesn't change the system's state or cause any side effects.
 
-![command-and-query-responsibility-segregation](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/command-and-query-responsibility-segregation/command-and-query-responsibility-segregation.png)
+![command-and-query-responsibility-segregation](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/command-and-query-responsibility-segregation/command-and-query-responsibility-segregation.png)
 
 The core principle of CQRS is the separation of commands and queries. They perform fundamentally different roles within a system, and separating them means that each can be optimized as needed, which distributed systems can really benefit from.
 
@@ -2608,7 +2608,7 @@ Here are some scenarios where CQRS will be helpful:
 
 The API Gateway is an API management tool that sits between a client and a collection of backend services. It is a single entry point into a system that encapsulates the internal system architecture and provides an API that is tailored to each client. It also has other responsibilities such as authentication, monitoring, load balancing, caching, throttling, logging, etc.
 
-![api-gateway](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/api-gateway/api-gateway.png)
+![api-gateway](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/api-gateway/api-gateway.png)
 
 ## Why do we need an API Gateway?
 
@@ -2656,7 +2656,7 @@ In the Backend For Frontend (BFF) pattern, we create separate backend services t
 
 Also, sometimes the output of data returned by the microservices to the front end is not in the exact format or filtered as needed by the front end. To solve this issue, the frontend should have some logic to reformat the data, and therefore, we can use BFF to shift some of this logic to the intermediate layer.
 
-![backend-for-frontend](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/api-gateway/backend-for-frontend.png)
+![backend-for-frontend](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/api-gateway/backend-for-frontend.png)
 
 The primary function of the backend for the frontend pattern is to get the required data from the appropriate service, format the data, and sent it to the frontend.
 
@@ -2960,7 +2960,7 @@ HTTP Long polling is a technique used to push information to a client as soon as
 
 In Long polling, the server does not close the connection once it receives a request from the client. Instead, the server responds only if any new message is available or a timeout threshold is reached.
 
-![long-polling](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/long-polling-websockets-server-sent-events/long-polling.png)
+![long-polling](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/long-polling-websockets-server-sent-events/long-polling.png)
 
 Once the client receives a response, it immediately sends a new request to the server to have a new pending connection to send data to the client, and the operation is repeated. With this approach, the server emulates a real-time server push feature.
 
@@ -2994,7 +2994,7 @@ WebSocket provides full-duplex communication channels over a single TCP connecti
 
 The client establishes a WebSocket connection through a process known as the WebSocket handshake. If the process succeeds, then the server and client can exchange data in both directions at any time. The WebSocket protocol enables the communication between a client and a server with lower overheads, facilitating real-time data transfer from and to the server.
 
-![websockets](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/long-polling-websockets-server-sent-events/websockets.png)
+![websockets](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/long-polling-websockets-server-sent-events/websockets.png)
 
 This is made possible by providing a standardized way for the server to send content to the client without being asked and allowing for messages to be passed back and forth while keeping the connection open.
 
@@ -3028,7 +3028,7 @@ Let's discuss some disadvantages of WebSockets:
 
 Server-Sent Events (SSE) is a way of establishing long-term communication between client and server that enables the server to proactively push data to the client.
 
-![server-sent-events](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-III/long-polling-websockets-server-sent-events/server-sent-events.png)
+![server-sent-events](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-III/long-polling-websockets-server-sent-events/server-sent-events.png)
 
 It is unidirectional, meaning once the client sends the request it can only receive the responses without the ability to send new requests over the same connection.
 
@@ -3064,7 +3064,7 @@ For example, San Francisco with coordinates `37.7564, -122.4016` can be represen
 
 Geohash is a hierarchical spatial index that uses Base-32 alphabet encoding, the first character in a geohash identifies the initial location as one of the 32 cells. This cell will also contain 32 cells. This means that to represent a point, the world is recursively divided into smaller and smaller cells with each additional bit until the desired precision is attained. The precision factor also determines the size of the cell.
 
-![geohashing](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/geohashing.png)
+![geohashing](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/geohashing.png)
 
 Geohashing guarantees that points are spatially closer if their Geohashes share a longer prefix which means the more characters in the string, the more precise the location. For example, geohashes `9q8yy9mf` and `9q8yy9vx` are spatially closer as they share the prefix `9q8yy9`.
 
@@ -3108,7 +3108,7 @@ Geohashing is widely used and it is supported by popular databases.
 
 A quadtree is a tree data structure in which each internal node has exactly four children. They are often used to partition a two-dimensional space by recursively subdividing it into four quadrants or regions. Each child or leaf node stores spatial information. Quadtrees are the two-dimensional analog of [Octrees](https://en.wikipedia.org/wiki/Octree) which are used to partition three-dimensional space.
 
-![quadtree](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree.png)
+![quadtree](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree.png)
 
 ### Types of Quadtrees
 
@@ -3124,7 +3124,7 @@ Quadtrees may be classified according to the type of data they represent, includ
 
 Aren't latitude and longitude enough? Why do we need quadtrees? While in theory using latitude and longitude we can determine things such as how close points are to each other using [euclidean distance](https://en.wikipedia.org/wiki/Euclidean_distance), for practical use cases it is simply not scalable because of its CPU-intensive nature with large data sets.
 
-![quadtree-subdivision](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree-subdivision.png)
+![quadtree-subdivision](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree-subdivision.png)
 
 Quadtrees enable us to search points within a two-dimensional range efficiently, where those points are defined as latitude/longitude coordinates or as cartesian (x, y) coordinates. Additionally, we can save further computation by only subdividing a node after a certain threshold. And with the application of mapping algorithms such as the [Hilbert curve](https://en.wikipedia.org/wiki/Hilbert_curve), we can easily improve range query performance.
 
@@ -3142,7 +3142,7 @@ Below are some common uses of quadtrees:
 
 The circuit breaker is a design pattern used to detect failures and encapsulates the logic of preventing a failure from constantly recurring during maintenance, temporary external system failure, or unexpected system difficulties.
 
-![circuit-breaker](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/circuit-breaker/circuit-breaker.png)
+![circuit-breaker](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/circuit-breaker/circuit-breaker.png)
 
 The basic idea behind the circuit breaker is very simple. We wrap a protected function call in a circuit breaker object, which monitors for failures. Once the failures reach a certain threshold, the circuit breaker trips, and all further calls to the circuit breaker return with an error, without the protected call being made at all. Usually, we'll also want some kind of monitor alert if the circuit breaker trips.
 
@@ -3170,7 +3170,7 @@ In this state, the circuit breaker allows a limited number of requests from the 
 
 Rate limiting refers to preventing the frequency of an operation from exceeding a defined limit. In large-scale systems, rate limiting is commonly used to protect underlying services and resources. Rate limiting is generally used as a defensive mechanism in distributed systems, so that shared resources can maintain availability. It also protects our APIs from unintended or malicious overuse by limiting the number of requests that can reach our API in a given period of time.
 
-![rate-limiting](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/rate-limiting/rate-limiting.png)
+![rate-limiting](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/rate-limiting/rate-limiting.png)
 
 ## Why do we need Rate Limiting?
 
@@ -3235,13 +3235,13 @@ There are two main service discovery patterns:
 
 ### Client-side discovery
 
-![client-side-service-discovery](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/service-discovery/client-side-service-discovery.png)
+![client-side-service-discovery](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/service-discovery/client-side-service-discovery.png)
 
 In this approach, the client obtains the location of another service by querying a service registry which is responsible for managing and storing the network locations of all the services.
 
 ### Server-side discovery
 
-![server-side-service-discovery](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/service-discovery/server-side-service-discovery.png)
+![server-side-service-discovery](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/service-discovery/server-side-service-discovery.png)
 
 In this approach, we use an intermediate component such as a load balancer. The client makes a request to the service via a load balancer which then forwards the request to an available service instance.
 
@@ -3317,7 +3317,7 @@ Disaster recovery can have the following benefits:
 
 Let's discuss some important terms relevantly for disaster recovery:
 
-![disaster-recovery](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/disaster-recovery/disaster-recovery.png)
+![disaster-recovery](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/disaster-recovery/disaster-recovery.png)
 
 ### RTO
 
@@ -3393,7 +3393,7 @@ Containers are lightweight and allow us to use just the computing resources we n
 
 ## Virtualization vs Containerization
 
-![virtualization-vs-containerization](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/virtual-machines-and-containers/virtualization-vs-containerization.png)
+![virtualization-vs-containerization](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/virtual-machines-and-containers/virtualization-vs-containerization.png)
 
 In traditional virtualization, a hypervisor virtualizes physical hardware. The result is that each virtual machine contains a guest OS, a virtual copy of the hardware that the OS requires to run, and an application and its associated libraries and dependencies.
 
@@ -3420,7 +3420,7 @@ The OAuth 2.0 protocol defines the following entities:
 
 Let's learn how OAuth 2.0 works:
 
-![oauth2](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/oauth2-and-openid-connect/oauth2.png)
+![oauth2](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/oauth2-and-openid-connect/oauth2.png)
 
 1. The client requests authorization from the Authorization Server, supplying the client id and secret as identification. It also provides the scopes and an endpoint URI to send the Access Token or the Authorization Code.
 2. The Authorization Server authenticates the client and verifies that the requested scopes are permitted.
@@ -3489,7 +3489,7 @@ SAML specifically enables identity federation, making it possible for identity p
 
 Now, let's discuss how Single Sign-On works:
 
-![sso](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/single-sign-on/sso.png)
+![sso](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/single-sign-on/sso.png)
 
 1. The user requests a resource from their desired application.
 2. The application redirects the user to the Identity Provider (IdP) for authentication.
@@ -3812,7 +3812,7 @@ Here is our high-level estimate:
 
 Next, we will focus on the data model design. Here is our database schema:
 
-![url-shortener-datamodel](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/url-shortener/url-shortener-datamodel.png)
+![url-shortener-datamodel](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/url-shortener/url-shortener-datamodel.png)
 
 Initially, we can get started with just two tables:
 
@@ -3989,7 +3989,7 @@ _For more details, refer to [caching](https://karanpratapsingh.com/courses/syste
 
 Now that we have identified some core components, let's do the first draft of our system design.
 
-![url-shortener-basic-design](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/url-shortener/url-shortener-basic-design.png)
+![url-shortener-basic-design](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/url-shortener/url-shortener-basic-design.png)
 
 Here's how it works:
 
@@ -4061,7 +4061,7 @@ We can also use an [API Gateway](https://karanpratapsingh.com/courses/system-des
 
 ## Identify and resolve bottlenecks
 
-![url-shortener-advanced-design](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/url-shortener/url-shortener-advanced-design.png)
+![url-shortener-advanced-design](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/url-shortener/url-shortener-advanced-design.png)
 
 Let us identify and resolve bottlenecks such as single points of failure in our design:
 
@@ -4180,7 +4180,7 @@ Here is our high-level estimate:
 
 This is the general data model which reflects our requirements.
 
-![whatsapp-datamodel](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/whatsapp/whatsapp-datamodel.png)
+![whatsapp-datamodel](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/whatsapp/whatsapp-datamodel.png)
 
 We have the following tables:
 
@@ -4379,7 +4379,7 @@ Handling read receipts can be tricky, for this use case we can wait for some sor
 
 Now that we have identified some core components, let's do the first draft of our system design.
 
-![whatsapp-basic-design](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/whatsapp/whatsapp-basic-design.png)
+![whatsapp-basic-design](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/whatsapp/whatsapp-basic-design.png)
 
 ## Detailed design
 
@@ -4440,7 +4440,7 @@ We can use services like [Amazon API Gateway](https://aws.amazon.com/api-gateway
 
 ## Identify and resolve bottlenecks
 
-![whatsapp-advanced-design](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/whatsapp/whatsapp-advanced-design.png)
+![whatsapp-advanced-design](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/whatsapp/whatsapp-advanced-design.png)
 
 Let us identify and resolve bottlenecks such as single points of failure in our design:
 
@@ -4566,7 +4566,7 @@ Here is our high-level estimate:
 
 This is the general data model which reflects our requirements.
 
-![twitter-datamodel](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/twitter/twitter-datamodel.png)
+![twitter-datamodel](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/twitter/twitter-datamodel.png)
 
 We have the following tables:
 
@@ -4726,7 +4726,7 @@ Publishing is the step where the feed data is pushed according to each specific 
 
 - Pull Model (or Fan-out on load)
 
-![newsfeed-pull-model](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/twitter/newsfeed-pull-model.png)
+![newsfeed-pull-model](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/twitter/newsfeed-pull-model.png)
 
 When a user creates a tweet, and a follower reloads their newsfeed, the feed is created and stored in memory. The most recent feed is only loaded when the user requests it. This approach reduces the number of write operations on our database.
 
@@ -4734,7 +4734,7 @@ The downside of this approach is that the users will not be able to view recent 
 
 - Push Model (or Fan-out on write)
 
-![newsfeed-push-model](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/twitter/newsfeed-push-model.png)
+![newsfeed-push-model](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/twitter/newsfeed-push-model.png)
 
 In this model, once a user creates a tweet, it is "pushed" to all the follower's feeds immediately. This prevents the system from having to go through a user's entire followers list to check for updates.
 
@@ -4852,7 +4852,7 @@ But where can we store files at scale? Well, [object storage](https://karanprata
 
 ## Identify and resolve bottlenecks
 
-![twitter-advanced-design](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/twitter/twitter-advanced-design.png)
+![twitter-advanced-design](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/twitter/twitter-advanced-design.png)
 
 Let us identify and resolve bottlenecks such as single points of failure in our design:
 
@@ -4969,7 +4969,7 @@ Here is our high-level estimate:
 
 This is the general data model which reflects our requirements.
 
-![netflix-datamodel](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/netflix/netflix-datamodel.png)
+![netflix-datamodel](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/netflix/netflix-datamodel.png)
 
 We have the following tables:
 
@@ -5125,7 +5125,7 @@ There are so many variables in play when it comes to processing a video. For exa
 
 Here's how we can process videos once they're uploaded by the content team (or users in YouTube's case) and are queued for processing in our [message queue](https://karanpratapsingh.com/courses/system-design/message-queues).
 
-![video-processing-pipeline](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/netflix/video-processing-pipeline.png)
+![video-processing-pipeline](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/netflix/video-processing-pipeline.png)
 
 Let's discuss how this works:
 
@@ -5135,7 +5135,7 @@ This is the first step of our processing pipeline. File chunking is the process 
 
 Usually, a video file can be split into equal size chunks based on timestamps but Netflix instead splits chunks based on scenes, this slight variation becomes a huge factor for a better user experience as whenever the client requests a chunk from the server, there is a lower chance of interruption as a complete scene will be retrieved.
 
-![file-chunking](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/netflix/file-chunking.png)
+![file-chunking](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/netflix/file-chunking.png)
 
 - **Content Filter**
 
@@ -5260,7 +5260,7 @@ We will use distributed file storage such as [HDFS](https://karanpratapsingh.com
 
 ## Identify and resolve bottlenecks
 
-![netflix-advanced-design](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/netflix/netflix-advanced-design.png)
+![netflix-advanced-design](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/netflix/netflix-advanced-design.png)
 
 Let us identify and resolve bottlenecks such as single points of failure in our design:
 
@@ -5378,7 +5378,7 @@ Here is our high-level estimate:
 
 This is the general data model which reflects our requirements.
 
-![uber-datamodel](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/uber/uber-datamodel.png)
+![uber-datamodel](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/uber/uber-datamodel.png)
 
 We have the following tables:
 
@@ -5562,7 +5562,7 @@ _Note: Learn more about [REST, GraphQL, gRPC](https://karanpratapsingh.com/cours
 
 Here's how our service is expected to work:
 
-![uber-working](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/uber/uber-working.png)
+![uber-working](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/uber/uber-working.png)
 
 1. Customer requests a ride by specifying the source, destination, cab type, payment method, etc.
 2. Ride service registers this request, finds nearby drivers, and calculates the estimated time of arrival (ETA).
@@ -5610,7 +5610,7 @@ However, this is not scalable, and performing this query on large datasets will 
 
 Geohash is a hierarchical spatial index that uses Base-32 alphabet encoding, the first character in a geohash identifies the initial location as one of the 32 cells. This cell will also contain 32 cells. This means that to represent a point, the world is recursively divided into smaller and smaller cells with each additional bit until the desired precision is attained. The precision factor also determines the size of the cell.
 
-![geohashing](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/geohashing.png)
+![geohashing](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/geohashing.png)
 
 For example, San Francisco with coordinates `37.7564, -122.4016` can be represented in geohash as `9q8yy9mf`.
 
@@ -5620,13 +5620,13 @@ Now, using the customer's geohash we can determine the nearest available driver 
 
 A [Quadtree](/courses/sytem-design/geohashing-and-quadtrees#quadtrees) is a tree data structure in which each internal node has exactly four children. They are often used to partition a two-dimensional space by recursively subdividing it into four quadrants or regions. Each child or leaf node stores spatial information. Quadtrees are the two-dimensional analog of [Octrees](https://en.wikipedia.org/wiki/Octree) which are used to partition three-dimensional space.
 
-![quadtree](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree.png)
+![quadtree](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree.png)
 
 Quadtrees enable us to search points within a two-dimensional range efficiently, where those points are defined as latitude/longitude coordinates or as cartesian (x, y) coordinates.
 
 We can save further computation by only subdividing a node after a certain threshold.
 
-![quadtree-subdivision](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree-subdivision.png)
+![quadtree-subdivision](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-IV/geohashing-and-quadtrees/quadtree-subdivision.png)
 
 [Quadtree](/courses/sytem-design/geohashing-and-quadtrees#quadtrees) seems perfect for our use case, we can update the Quadtree every time we receive a new location update from the driver. To reduce the load on the quadtree servers we can use an in-memory datastore such as [Redis](https://redis.io) to cache the latest updates. And with the application of mapping algorithms such as the [Hilbert curve](https://en.wikipedia.org/wiki/Hilbert_curve), we can perform efficient range queries to find nearby drivers for the customer.
 
@@ -5686,7 +5686,7 @@ _For more details, refer to [Caching](https://karanpratapsingh.com/courses/syste
 
 ## Identify and resolve bottlenecks
 
-![uber-advanced-design](https://raw.githubusercontent.com/SamirPaulb/portfolio/master/public/static/courses/system-design/chapter-V/uber/uber-advanced-design.png)
+![uber-advanced-design](https://raw.githubusercontent.com/SamirPaul1/portfolio/master/public/static/courses/system-design/chapter-V/uber/uber-advanced-design.png)
 
 Let us identify and resolve bottlenecks such as single points of failure in our design:
 
