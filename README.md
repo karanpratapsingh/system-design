@@ -247,6 +247,8 @@ This brings us to Domain Name System (DNS) which is a hierarchical and decentral
 ## How DNS works
 
 ![how-dns-works](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/domain-name-system/how-dns-works.png)
+-->  In the Photo - Arrows are incorrectly assigned Recursive and Iterative.
+-->  Arrows between client and DNS resolver should be iterative and rest would be recursive.
 
 DNS lookup involves the following eight steps:
 
