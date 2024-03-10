@@ -5753,3 +5753,6 @@ Here are the resources that were referenced while creating this course.
 - [VMWare Blogs](https://blogs.vmware.com/learning)
 
 _All the diagrams were made using [Excalidraw](https://excalidraw.com) and are available [here](https://github.com/karanpratapsingh/system-design/tree/main/diagrams)._
+
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
