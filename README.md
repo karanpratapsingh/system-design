@@ -1357,11 +1357,11 @@ Before we go any further, let's look at some commonly used terms in normalizatio
 
 ### Dependencies
 
-**Partial dependency**: Occurs when the primary key determines some other attributes.
+**Partial dependency**: Occurs when an attribute that is part of a composite key determines some other attributes. For example, In a table Order(ID,ProductName,Quantity,Price) with a composite key (ID,ProductName) then we can say that attribute 'Price' is dependent on or determined by attribute 'ID' and not the entire composite key (ID,ProductName). Price is therefore partially dependent on ID.
 
-**Functional dependency**: It is a relationship that exists between two attributes, typically between the primary key and non-key attribute within a table.
+**Functional dependency**: It is a relationship that exists between two attributes where by one attribute or group of attributes uniquely determines another attribute in the database. For example, in a table Employee(EmployeeId,SocialSecurityNumber,Name,Age), a functional dependency exists between either 'EmployeeID' or 'SocialSecurityNumber' or both attributes and 'Name' as we can use either to uniquely determine 'Name'. Name is therefore functionally dependent on EmployeeID or SocialSecurityNumber or both.
 
-**Transitive functional dependency**: Occurs when some non-key attribute determines some other attribute.
+**Transitive functional dependency**: Occurs when an attribute indirectly determines another attribute. For example, in a table Customer(ID,Name,SubscriptionID,SubscriptionName), we can say customer's ID determines his/her SubscriptionID and SubscriptionID determines SubscriptionName, therefore customer's ID indirectly determines SubscriptioName thus the two hold a Transitive Dependency.
 
 ### Anomalies
 
