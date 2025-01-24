@@ -136,6 +136,25 @@ A public IP address is an address where one primary address is associated with y
 
 _Example: IP address provided to your router by the ISP._
 
+If you connect to your router, 203.0.113.45 will be the public IP address of your router, not directly your laptop or phone.
+
+Here’s how it works:
+
+Public IP Address (203.0.113.45):
+
+This is assigned to your router by your Internet Service Provider (ISP).
+It's what the world sees when your network communicates with external systems on the internet.
+All devices in your local network (laptops, phones, etc.) appear to use this public IP address for external communication.
+Private IP Addresses (e.g., 192.168.0.x):
+
+Inside your home network, your router assigns private IP addresses to each connected device using DHCP (Dynamic Host Configuration Protocol).
+Example: Your laptop might get 192.168.0.2 and your phone might get 192.168.0.3. These are only used within your local network and are not visible to the internet.
+NAT (Network Address Translation):
+
+Your router acts as a middleman between your devices and the internet.
+When your laptop or phone sends a request to the internet, the router replaces the private IP with its public IP (203.0.113.45) so that the outside world sees only the router’s public IP.
+When the response comes back, the router uses NAT to route the data to the correct device inside the network.
+
 ### Private
 
 A private IP address is a unique IP number assigned to every device that connects to your internet network, which includes devices like computers, tablets, and smartphones, which are used in your household.
