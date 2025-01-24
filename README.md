@@ -215,6 +215,41 @@ Transmission Control Protocol (TCP) is connection-oriented, meaning once a conne
 
 But while TCP is instinctively reliable, its feedback mechanisms also result in a larger overhead, translating to greater use of the available bandwidth on the network.
 
+
+The TCP protocol (Transmission Control Protocol) is one of the core protocols of the Internet protocol suite. It operates at the transport layer (Layer 4) of the OSI model and is responsible for ensuring reliable, ordered, and error-checked delivery of data between applications communicating over a network.
+
+The TCP protocol (Transmission Control Protocol) is one of the core protocols of the Internet protocol suite. It operates at the transport layer (Layer 4) of the OSI model and is responsible for ensuring reliable, ordered, and error-checked delivery of data between applications communicating over a network.
+
+Key Features of TCP:
+Connection-Oriented:
+
+TCP establishes a connection between the sender and receiver before data transfer begins. This connection is maintained throughout the session and ensures reliable communication.
+Reliable Data Delivery:
+
+TCP ensures that data is delivered without errors, in the correct order, and without duplication. If any data packets are lost or corrupted, TCP retransmits them.
+Flow Control:
+
+TCP uses flow control to manage the rate of data transmission to ensure that the sender does not overwhelm the receiver with too much data.
+Error Checking:
+
+TCP includes error detection mechanisms, such as checksums, to verify data integrity during transmission.
+Congestion Control:
+
+TCP adjusts the rate of data transmission based on network congestion to prevent overwhelming the network and to ensure smooth traffic flow.
+Stream-Oriented:
+
+TCP treats data as a continuous stream of bytes, making it suitable for applications where the order of data is critical (e.g., file transfer, web browsing).
+
+How TCP Works:
+TCP communication involves three main phases: Connection Establishment, Data Transfer, and Connection Termination.
+
+1. Connection Establishment (Three-Way Handshake):
+TCP uses a three-step process to establish a connection:
+SYN: The client sends a SYN (synchronize) packet to the server to initiate the connection.
+SYN-ACK: The server responds with a SYN-ACK (synchronize-acknowledgment) packet to acknowledge the request.
+ACK: The client sends an ACK (acknowledgment) packet back to the server, confirming the connection.
+After this handshake, the connection is established, and data transfer can begin.
+
 ## UDP
 
 User Datagram Protocol (UDP) is a simpler, connectionless internet protocol in which error-checking and recovery services are not required. With UDP, there is no overhead for opening a connection, maintaining a connection, or terminating a connection. Data is continuously sent to the recipient, whether or not they receive it.
