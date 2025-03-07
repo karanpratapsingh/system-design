@@ -4582,8 +4582,6 @@ Follower ID (`UUID`): ID of the current user.
 
 Followee ID (`UUID`): ID of the user we want to follow or unfollow.
 
-Media URL (`string`): URL of the attached media _(optional)_.
-
 **Returns**
 
 Result (`boolean`): Represents whether the operation was successful or not.
