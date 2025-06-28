@@ -1767,7 +1767,7 @@ There are a large number of criteria available for data partitioning. Some most 
 
 This strategy divides the rows into different partitions based on a hashing algorithm rather than grouping database rows based on continuous indexes.
 
-The disadvantage of this method is that dynamically adding/removing database servers becomes expensive.
+The disadvantage of this method is that dynamically adding/removing database servers becomes expensive. This expense arises because a key's shard is often determined by a formula like `hash(key) % number_of_servers`. When a server is added or removed, `number_of_servers` changes, altering the result of the formula for nearly every key and requiring a massive rebalancing of data across the system.
 
 ### List-Based
 
