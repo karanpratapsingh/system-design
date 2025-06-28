@@ -1094,7 +1094,7 @@ One of the simplest types of NoSQL databases, key-value databases save data as a
 
 - Basic CRUD
 - Values can't be filtered
-- Lacks indexing and scanning capabilities
+- Lacks [indexing](#indexes) and scanning capabilities
 - Not optimized for complex queries
 
 **Examples**
