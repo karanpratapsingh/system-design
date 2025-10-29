@@ -1303,9 +1303,9 @@ Both masters serve reads/writes and coordinate with each other. If either master
 
 ## Synchronous vs Asynchronous replication
 
-The primary difference between synchronous and asynchronous replication is how the data is written to the replica. In synchronous replication, data is written to primary storage and the replica simultaneously. As such, the primary copy and the replica should always remain synchronized.
+The primary difference between synchronous and asynchronous replication is how the data is written to the replica. In asynchronous replication, data is written to primary storage and the replica simultaneously. As such, the primary copy and the replica should always remain synchronized.
 
-In contrast, asynchronous replication copies the data to the replica after the data is already written to the primary storage. Although the replication process may occur in near-real-time, it is more common for replication to occur on a scheduled basis and it is more cost-effective.
+In contrast, synchronous replication copies the data to the replica after the data is already written to the primary storage. Although the replication process may occur in near-real-time, it is more common for replication to occur on a scheduled basis and it is more cost-effective.
 
 # Indexes
 
