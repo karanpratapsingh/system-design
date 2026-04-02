@@ -1272,7 +1272,7 @@ The master serves reads and writes, replicating writes to one or more slaves, wh
 
 ### Advantages
 
-- Backups of the entire database of relatively no impact on the master.
+- Backups of the entire database have relatively no impact on the master.
 - Applications can read from the slave(s) without impacting the master.
 - Slaves can be taken offline and synced back to the master without any downtime.
 
