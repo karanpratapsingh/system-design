@@ -120,7 +120,7 @@ _Example: `102.22.192.181`_
 
 ### IPv6
 
-IPv6 is a new protocol that was introduced in 1998. Deployment commenced in the mid-2000s and since the internet users have grown exponentially, it is still ongoing.
+IPv6 is a new protocol that was introduced in 1998. Deployment commenced in the mid-2000s and since the Internet users have grown exponentially, it is still ongoing.
 
 This new protocol uses 128-bit alphanumeric hexadecimal notation. This means that IPv6 can provide about ~340e+36 IP addresses. That's more than enough to meet the growing demand for years to come.
 
@@ -150,7 +150,7 @@ _Example: They are usually used for important things like reliable geo-location 
 
 ### Dynamic
 
-A dynamic IP address changes from time to time and is not always the same. It has been assigned by a [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) server. Dynamic IP addresses are the most common type of internet protocol address. They are cheaper to deploy and allow us to reuse IP addresses within a network as needed.
+A dynamic IP address changes from time to time and is not always the same. It has been assigned by a [Dynamic Host Configuration Protocol (DHCP)](https://en.wikipedia.org/wiki/Dynamic_Host_Configuration_Protocol) server. Dynamic IP addresses are the most common type of Internet Protocol address. They are cheaper to deploy and allow us to reuse IP addresses within a network as needed.
 
 _Example: They are more commonly used for consumer equipment and personal use._
 
@@ -195,7 +195,7 @@ The transport layer (also known as layer 4) is responsible for end-to-end commun
 
 ### Network
 
-The network layer is responsible for facilitating data transfer between two different networks. The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender's device, and reassembles these packets on the receiving device. The network layer also finds the best physical path for the data to reach its destination this is known as routing. If the two devices communicating are on the same network, then the network layer is unnecessary.
+The network layer is responsible for facilitating data transfer between two different networks. The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender's device, and reassembles these packets on the receiving device. The network layer also finds the best physical path for the data to reach its destination, this is known as routing. If the two devices communicating are on the same network, then the network layer is unnecessary.
 
 ### Data Link
 
@@ -221,7 +221,7 @@ User Datagram Protocol (UDP) is a simpler, connectionless internet protocol in w
 
 ![udp](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/tcp-and-udp/udp.png)
 
-It is largely preferred for real-time communications like broadcast or multicast network transmission. We should use UDP over TCP when we need the lowest latency and late data is worse than the loss of data.
+It is largely preferred for real-time communications like broadcast or multicast network transmission. We should use UDP over TCP when we need the lowest latency and late data is worse than lost data.
 
 ## TCP vs UDP
 
@@ -598,7 +598,7 @@ Where write directly goes to the database or permanent storage, bypassing the ca
 
 **Pro**: This may reduce latency.
 
-**Con**: It increases cache misses because the cache system has to read the information from the database in case of a cache miss. As a result, this can lead to higher read latency in the case of applications that write and re-read the information quickly. Read happen from slower back-end storage and experiences higher latency.
+**Con**: It increases cache misses because the cache system has to read the information from the database in case of a cache miss. As a result, this can lead to higher read latency in the case of applications that write and re-read the information quickly. Reads happen from slower back-end storage and experience higher latency.
 
 ### Write-back cache
 
@@ -736,7 +736,7 @@ There are two types of proxies:
 
 ### Forward Proxy
 
-A forward proxy, often called a proxy, proxy server, or web proxy is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman.
+A forward proxy, often called a proxy server, or web proxy is a server that sits in front of a group of client machines. When those computers make requests to sites and services on the internet, the proxy server intercepts those requests and then communicates with web servers on behalf of those clients, like a middleman.
 
 ![forward-proxy](https://raw.githubusercontent.com/karanpratapsingh/portfolio/master/public/static/courses/system-design/chapter-I/proxy/forward-proxy.png)
 
@@ -896,7 +896,7 @@ RAID (Redundant Array of Independent Disks) is a way of storing the same data on
 There are different RAID levels, however, and not all have the goal of providing redundancy. Let's discuss some commonly used RAID levels:
 
 - **RAID 0**: Also known as striping, data is split evenly across all the drives in the array.
-- **RAID 1**: Also known as mirroring, at least two drives contains the exact copy of a set of data. If a drive fails, others will still work.
+- **RAID 1**: Also known as mirroring, at least two drives contain the exact copy of a set of data. If a drive fails, others will still work.
 - **RAID 5**: Striping with parity. Requires the use of at least 3 drives, striping the data across multiple drives like RAID 0, but also has a parity distributed across the drives.
 - **RAID 6**: Striping with double parity. RAID 6 is like RAID 5, but the parity data are written to two drives.
 - **RAID 10**: Combines striping plus mirroring from RAID 0 and RAID 1. It provides security by mirroring all data on secondary drives while using striping across each set of drives to speed up data transfers.
@@ -1021,7 +1021,7 @@ It also enables data subsetting and improves the performance of complex queries 
 
 ## N+1 query problem
 
-The N+1 query problem happens when the data access layer executes N additional SQL statements to fetch the same data that could have been retrieved when executing the primary SQL query. The larger the value of N, the more queries will be executed, the larger the performance impact.
+The N+1 query problem happens when the data access layer executes N additional SQL statements to fetch the same data that could have been retrieved when executing the primary SQL query. The larger the value of N, the more queries will be executed, the greater the performance impact.
 
 This is commonly seen in GraphQL and ORM (Object-Relational Mapping) tools and can be addressed by optimizing the SQL query or using a dataloader that batches consecutive requests and makes a single data request under the hood.
 
