@@ -63,6 +63,7 @@ _This course is also available on my [website](https://karanpratapsingh.com/cour
   - [Geohashing and Quadtrees](#geohashing-and-quadtrees)
   - [Circuit breaker](#circuit-breaker)
   - [Rate Limiting](#rate-limiting)
+  - [Idempotency](#idempotency)
   - [Service Discovery](#service-discovery)
   - [SLA, SLO, SLI](#sla-slo-sli)
   - [Disaster recovery](#disaster-recovery)
@@ -3163,6 +3164,67 @@ The simplest way to solve this problem is to use sticky sessions in our load bal
 This issue happens when we use a naive _"get-then-set"_ approach, in which we retrieve the current rate limit counter, increment it, and then push it back to the datastore. This model's problem is that additional requests can come through in the time it takes to perform a full cycle of read-increment-store, each attempting to store the increment counter with an invalid (lower) counter value. This allows a consumer to send a very large number of requests to bypass the rate limiting controls.
 
 One way to avoid this problem is to use some sort of distributed locking mechanism around the key, preventing any other processes from accessing or writing to the counter. Though the lock will become a significant bottleneck and will not scale well. A better approach might be to use a _"set-then-get"_ approach, allowing us to quickly increment and check counter values without letting the atomic operations get in the way.
+
+# Idempotency
+
+An operation is idempotent if performing it multiple times has the same effect as performing it once. Setting a user's email to `a@example.com` is idempotent, while _"add $10 to the balance"_ is not, because every repeat changes the result.
+
+In distributed systems, networks drop responses, clients time out, and load balancers retry. As a result, the same request often reaches a server more than once. Idempotency is what makes it safe to retry.
+
+## Why do we need Idempotency?
+
+Consider a client that sends a payment request and the connection times out. The client cannot know whether the server never received the request, processed it but the response was lost, or is still processing it. The only safe way to recover is to retry, but without idempotency a retry can charge the customer twice.
+
+Idempotency is important because:
+
+- It makes retries safe, which is what allows us to build reliable systems on top of unreliable networks.
+- Most message brokers offer _at-least-once_ delivery, so consumers will eventually see duplicates.
+- It protects against duplicate submissions caused by users double-clicking or refreshing a page.
+- It simplifies client logic, as clients can retry aggressively without reasoning about the server's state.
+
+## Idempotency in HTTP
+
+Some HTTP methods are idempotent by definition:
+
+| Method   | Idempotent | Notes                                             |
+| -------- | ---------- | ------------------------------------------------- |
+| `GET`    | Yes        | Reads data and should not change state.           |
+| `PUT`    | Yes        | Replaces a resource with the same representation. |
+| `DELETE` | Yes        | Deleting an already deleted resource is a no-op.  |
+| `POST`   | No         | Typically creates a new resource on every call.   |
+| `PATCH`  | No         | Depends on the patch semantics, e.g. increments.  |
+
+Note that idempotent means the server state is the same after one or many calls, not that the response is identical. For example, a repeated `DELETE` may return `404` instead of `200`.
+
+## Idempotency keys
+
+For operations that are not naturally idempotent, such as `POST /payments`, we can use an _idempotency key_. The client generates a unique value (usually a UUID) and sends it with the request, for example in an `Idempotency-Key` header. The server uses it to detect duplicates.
+
+The flow looks like this:
+
+1. The client generates a unique key and sends it along with the request.
+2. The server looks up the key in a datastore.
+3. If the key is not found, the server stores it, processes the request, and saves the response against the key.
+4. If the key is found, the server skips the processing and returns the saved response.
+
+Some important details to consider:
+
+- **Atomicity**: Checking for the key and recording it must be atomic, otherwise two concurrent retries can both pass the check. A unique constraint in a database or a `SET NX` in [Redis](https://redis.io) can be used for this.
+- **Request fingerprint**: We should also store a hash of the request payload. If the same key arrives with a different payload, the server should reject it rather than return an unrelated saved response.
+- **In-flight requests**: A retry can arrive while the original is still being processed. The server can return a `409 Conflict` or make the retry wait.
+- **Expiry**: Keys don't need to live forever. A retention period of a few hours to a few days is common, and it keeps the storage cost bounded.
+
+## Idempotent consumers
+
+The same idea applies to asynchronous systems. Since message brokers usually guarantee _at-least-once_ delivery, a consumer must handle duplicates. Common approaches are:
+
+- **Deduplication table**: Store the ID of each processed message and skip the message if its ID is already present. The ID should be written in the same transaction as the side effect.
+- **Natural idempotency**: Design the operation so that repeating it is harmless, for example _"set status to shipped"_ instead of _"advance status"_.
+- **Versioning**: Attach a version or sequence number to updates and ignore any update that is not newer than the current state.
+
+## Tradeoffs
+
+Idempotency is not free. We need extra storage and lookups for keys, and additional logic to handle concurrent and in-flight requests. It is also worth remembering that _exactly-once_ processing is generally not achievable across a network, but _at-least-once_ delivery combined with idempotent processing gives us the same observable result, which is called _effectively-once_ processing.
 
 # Service Discovery
 
