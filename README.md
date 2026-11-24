@@ -3077,7 +3077,7 @@ Quadtrees enable us to search points within a two-dimensional range efficiently,
 Below are some common uses of quadtrees:
 
 - Image representation, processing, and compression.
-- Spacial indexing and range queries.
+- Spatial indexing and range queries.
 - Location-based services like Google Maps, Uber, etc.
 - Mesh generation and computer graphics.
 - Sparse data storage.
